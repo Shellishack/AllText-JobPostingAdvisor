@@ -1,8 +1,69 @@
-<!DOCTYPE html>
+<!Doctype html>
 <html>
-    <head></head>
-    <body>
-        This is a page for employers.
-
-    </body>
+<head>
+	<script>
+	</script>
+	<style>
+		.title {
+			font-size: 36px;
+			text-align: center;
+			background-color: rgba(5,191,243,1.00);
+			color:white;
+			padding:30px;
+			
+		}
+		aside {
+			background-color: antiquewhite;
+			border: 3px;
+			border-color: black;
+			
+		}
+		.template input {
+			width: 40%;
+			padding: 8px 10px;
+			
+			
+		}
+		
+		.button:hover {
+			background-color
+			
+		}
+	</style>
+	<title>employer</title>
+</head>
+<body>
+		<header class="title"><strong>Welcome to (product name)</strong> </header>
+		<p> You can submit via provided template or <a href="">submit your document directly.</a></p>
+		
+<!-- I don't know how to get the template you used so I just make some functionalities -->
+		
+	<div class="document">
+  <p>
+    <aside style="position:absolute;left:1400px;padding:40px 60px;">Or submit your files here:<form>
+  <input type="file" id="myFile" name="filename">
+  <input type="submit">
+</form></aside>
+    Using the provided templates: <br> <br>
+	  </p>
+  
+</div>
+	<div class="template">
+		<form action="">
+		<label for="Cname">Company name:</label><br>
+		<input type="text" size="80" id="Cname"><br><br>
+		<label for="contact">Email address:</label><br>
+		<input tupe="text" size="200" id="contact"><br><br>
+		<label for="Cback">Company background:</label><br>
+		<input type="text" size="300" id="Cback" height="40px"><br><br>
+		<label for="Jdes">Job Description:</label><br>
+		<input type="text" size="1000" id="Jdes"><br><br>
+			
+		</form>
+		
+		<button id="final" style="background-color:rgba(4,122,150,1.00); border:none;color:white; padding:12px 32px; font-size:16px;">Submit</button>
+	</div>
+		
+	</body>
 </html>
+
