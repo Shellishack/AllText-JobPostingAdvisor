@@ -11,16 +11,17 @@
 	padding-bottom: 25px;
 }
 .row {
-	width: 100%;
+	width: 99.1%;
 	margin-top: 0px;
 	margin-right: 0px;
-	margin-bottom: 0px;
+	margin-bottom: -4px;
 	margin-left: 0px;
 	padding-top: 0px;
 	padding-right: 0px;
 	padding-bottom: 25px;
 	padding-left: 0px;
 	display: inline-block;
+	border: 5px solid gray;
 }
 .row.blockDisplay {
 	display: block;
