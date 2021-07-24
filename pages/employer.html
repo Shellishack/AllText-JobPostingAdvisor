@@ -4,6 +4,11 @@
 	<script>
 	</script>
 	<style>
+		body {
+			margin-left:400px;
+			margin-right:400px;
+			
+		}
 		.title {
 			font-size: 36px;
 			text-align: center;
@@ -12,7 +17,7 @@
 			padding:30px;
 			
 		}
-		aside {
+		aside.ds {
 			background-color: antiquewhite;
 			border: 3px;
 			border-color: black;
@@ -25,9 +30,19 @@
 			
 		}
 		
+		.button {
+			background-color:rgba(4,122,150,1.00); 
+			border:none;color:white; padding:12px 32px; 
+			font-size:16px;
+			transition-duration: 0.3s;
+		}
 		.button:hover {
-			background-color
-			
+			background-color:rgba(123,216,250,1.00);		
+		}
+		.next {
+			text-decoration: none;
+			color:white;
+			target:_blank;
 		}
 	</style>
 	<title>employer</title>
@@ -40,7 +55,7 @@
 		
 	<div class="document">
   <p>
-    <aside style="position:absolute;left:1400px;padding:40px 60px;">Or submit your files here:<form>
+    <aside class="ds" style="position:absolute;left:1000px;padding:40px 60px;">Or submit your files here:<form>
   <input type="file" id="myFile" name="filename">
   <input type="submit">
 </form></aside>
@@ -55,13 +70,16 @@
 		<label for="contact">Email address:</label><br>
 		<input tupe="text" size="200" id="contact"><br><br>
 		<label for="Cback">Company background:</label><br>
-		<input type="text" size="300" id="Cback" height="40px"><br><br>
+		<input type="text" size="300" id="Cback" style="height: 200px"><br><br>
 		<label for="Jdes">Job Description:</label><br>
-		<input type="text" size="1000" id="Jdes"><br><br>
+		<input type="text" size="1000" id="Jdes" style="height: 200px"><br><br>
 			
 		</form>
 		
-		<button id="final" style="background-color:rgba(4,122,150,1.00); border:none;color:white; padding:12px 32px; font-size:16px;">Submit</button>
+		<div>
+		<button id="final"  class="button">Submit</button>
+		<aside style="position:relative;left:200px;top:-42px;"><button class="button"><a href="View_Result.html" class="next">Proceed</a></button></aside>
+			</div>
 	</div>
 		
 	</body>
