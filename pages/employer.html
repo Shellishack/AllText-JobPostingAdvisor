@@ -4,10 +4,13 @@
 	<script>
 	</script>
 	<style>
-		body {
+		.text {
 			margin-left:400px;
 			margin-right:400px;
 			
+		}
+		body {
+			background-color:rgba(234,246,248,1.00)
 		}
 		.title {
 			font-size: 36px;
@@ -18,9 +21,10 @@
 			
 		}
 		aside.ds {
-			background-color: antiquewhite;
-			border: 3px;
-			border-color: black;
+			background-color:rgba(184,237,241,1.00);
+			border: 3px black solid;
+			border-color: rgba(24,57,185,1.00);
+			
 			
 		}
 		.template input {
@@ -49,13 +53,14 @@
 </head>
 <body>
 		<header class="title"><strong>Welcome to (product name)</strong> </header>
+	<div class="text">
 		<p> You can submit via provided template or <a href="">submit your document directly.</a></p>
 		
 <!-- I don't know how to get the template you used so I just make some functionalities -->
 		
 	<div class="document">
   <p>
-    <aside class="ds" style="position:absolute;left:1000px;padding:40px 60px;">Or submit your files here:<form>
+    <aside class="ds" style="position:absolute;left:1000px;top:250px;padding:40px 60px; box-sizing:content-box" >Or submit your files here:<form>
   <input type="file" id="myFile" name="filename">
   <input type="submit">
 </form></aside>
@@ -78,10 +83,10 @@
 		
 		<div>
 		<button id="final"  class="button">Submit</button>
-		<aside style="position:relative;left:200px;top:-42px;"><button class="button"><a href="View_Result.html" class="next">Proceed</a></button></aside>
+		<aside style="position:relative;left:200px;top:-42px;"><button class="button"><a href="View Result.html" class="next">Proceed</a></button></aside>
 			</div>
 	</div>
-		
+	</div>	
 	</body>
 </html>
 
