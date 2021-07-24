@@ -220,6 +220,7 @@ body {
 	margin-right: 0px;
 	margin-bottom: 0px;
 	margin-left: 0px;
+	font-family: 'Times New Roman', serif;
 }
 
 @media (max-width: 320px) {
@@ -458,4 +459,21 @@ body {
 #menu {
 }
 .body {
+}
+
+section {	
+	border: 5px solid gray;
+	padding: 5px;
+	height: 500px;
+}
+	
+nav a {
+  text-decoration: none;
+  color: white;
+  text-align: center;
+  font-size: 15px;
+}
+	  
+nav a:hover {
+	color: rgba(112,112,112,1.00);
 }
