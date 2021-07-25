@@ -1,73 +1,93 @@
 <!Doctype html>
 <html>
 <head>
-	<script>
-	</script>
-	<style>
-		.text {
-			margin-left:400px;
-			margin-right:400px;
-			
-		}
-		body {
-			background-color:rgba(234,246,248,1.00)
-		}
-		.title {
-			font-size: 36px;
-			text-align: center;
-			background-color: rgba(5,191,243,1.00);
-			color:white;
-			padding:30px;
-			
-		}
-		aside.ds {
-			background-color:rgba(184,237,241,1.00);
-			border: 3px black solid;
-			border-color: rgba(24,57,185,1.00);
-			
-			
-		}
-		.template input {
-			width: 40%;
-			padding: 8px 10px;
-			
-			
-		}
-		
-		.button {
-			background-color:rgba(4,122,150,1.00); 
-			border:none;color:white; padding:12px 32px; 
-			font-size:16px;
-			transition-duration: 0.3s;
-		}
-		.button:hover {
-			background-color:rgba(123,216,250,1.00);		
-		}
-		.next {
-			text-decoration: none;
-			color:white;
-			target:_blank;
-		}
-	</style>
-	<title>employer</title>
+	
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Employer</title>
+  <link href="../css/multiColumnTemplate.css" rel="stylesheet" type="text/css">
+	
+  <style>
+    .text {
+		margin-left:400px;
+		margin-right:400px;
+
+	}
+	  
+	body {
+		background-color:rgba(234,246,248,1.00)
+	}
+
+	}
+	aside.ds {
+		background-color:rgba(184,237,241,1.00);
+		border: 3px black solid;
+		border-color: rgba(24,57,185,1.00);
+
+
+	}
+	.template input {
+		width: 40%;
+		padding: 8px 10px;
+
+
+	}
+
+	.button {
+		background-color:rgba(4,122,150,1.00); 
+		border:none;color:white; padding:12px 32px; 
+		font-size:16px;
+		transition-duration: 0.3s;
+	}
+	.button:hover {
+		background-color:rgba(123,216,250,1.00);		
+	}
+	.next {
+		text-decoration: none;
+		color:white;
+		target:_blank;
+	}
+  </style>
 </head>
+	
 <body>
-		<header class="title"><strong>Welcome to (product name)</strong> </header>
+	
+	<header>
+    <div class="primary_header">
+      <h1 class="title"> Website Title (Our Product Name)&nbsp;&nbsp;</h1>
+    </div>
+    <nav class="secondary_header" id="menu">
+      <ul>
+        <li><a href="pages/employer.html">Employer</a></li>
+        <li><a href="pages/employee.html">Employee</a></li>
+        <li><a href="pages/aboutUs.html">About Us</a></li>
+		<li><a href="NewIndex.html">Main</a></li>
+      </ul>
+    </nav>
+  </header>
+	
 	<div class="text">
 		<p> You can submit via provided template or <a href="">submit your document directly.</a></p>
 		
 <!-- I don't know how to get the template you used so I just make some functionalities -->
 		
 	<div class="document">
-  <p>
-    <aside class="ds" style="position:absolute;left:1000px;top:250px;padding:40px 60px; box-sizing:content-box" >Or submit your files here:<form>
-  <input type="file" id="myFile" name="filename">
-  <input type="submit">
-</form></aside>
-    Using the provided templates: <br> <br>
+		
+  		<p>
+			<aside class="ds" style="position:absolute;left:1000px;top:250px;padding:40px 60px; box-sizing:content-box"> 
+				Or submit your files here:
+				<form>
+					<input type="file" id="myFile" name="filename">
+					<input type="submit">
+				</form>
+			</aside>
 	  </p>
   
-</div>
+	</div>
+	
+	
+	
 	<div class="template">
 		<form action="">
 		<label for="Cname">Company name:</label><br>
