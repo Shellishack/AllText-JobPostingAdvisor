@@ -140,9 +140,13 @@
 	padding-right: 5%;
 	text-align: justify;
 	line-height: 24px;
-	margin-top: -10px;
+	margin-top: 0px;
 	margin-bottom: 5px;
 	color: #0F0F0F;
+}
+.container .left_article li {
+	margin-bottom: 4.4px;
+	margin-top: 4.4px;
 }
 .right_article {
 	width: 40%;
@@ -262,14 +266,7 @@ body {
 	padding-top: 1px;
 	padding-bottom: 40px;
 }
-.left_article {
-	width: 100%;
-	height: auto;
-}
-.right_article {
-	width: 100%;
-	height: auto;
-}
+
 .placeholder {
 	width: 100%;
 	margin-top: 22PX;
