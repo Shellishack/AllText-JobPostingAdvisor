@@ -99,16 +99,17 @@
 	color: #717070;
 	cursor: pointer;
 }
+section{
+	border: 5px solid gray;
+	padding: 30px;
+	height: 1000px;
+}
 .left_article {
 	background-color: #FFFFFF;
 	width: 50%;
 	float: left;
-	font-family: "Source Sans Pro";
 	color: #717070;
-	margin: 0px;
-}
-.noDisplay {
-	display: none;
+	height: auto;
 }
 .container .left_article h2 {
 	padding-left: 5%;
@@ -117,6 +118,7 @@
 	color: #0F0F0F;
 	font-weight: bold;
 	text-transform: uppercase;
+	height: auto;
 }
 .container .left_article h3 {
 	padding-left: 10%;
@@ -125,34 +127,48 @@
 	color: #0F0F0F;
 	font-weight: bold;
 	text-transform: uppercase;
+	height: auto;
 }
 .study{
 	color: #7C7C79;
 	text-decoration: none;
 	font-weight: bold;
-	
+	height: auto;
 }
 .study:hover{
 	color: #2D2D2C;
 }
 .container .left_article ul {
-	padding-left: 15%;
-	padding-right: 5%;
+	margin-left: 15%;
+	margin-right: 5%;
 	text-align: justify;
 	line-height: 24px;
-	margin-top: 0px;
-	margin-bottom: 5px;
 	color: #0F0F0F;
+	height: auto;
+}
+.container .left_article ol {
+	height: auto;
 }
 .container .left_article li {
-	margin-bottom: 4.4px;
-	margin-top: 4.4px;
+	margin-bottom: 4.5px;
+	margin-top: 4.5px;
+	height: auto;
 }
 .right_article {
-	width: 40%;
+	width: 50%;
 	float: left;
 	background-color: #FFFFFF;
-	margin-top: 25px;
+	padding-left: 0px;
+	height: auto;
+}
+.container .right_article h3 {
+	padding-left: 10%;
+	padding-right: 5%;
+	margin-top: 5%;
+	color: #0F0F0F;
+	font-weight: bold;
+	text-transform: uppercase;
+	height: auto;
 }
 .container .right_article ul {
 	margin-top: 0px;
@@ -163,6 +179,7 @@
 	padding-right: 0px;
 	padding-bottom: 0px;
 	padding-left: 0px;
+	height: auto;
 }
 .right_article ul li {
 	font-family: "Source Sans Pro";
@@ -181,6 +198,7 @@
 	border-radius: 0px;
 	transition: all 0.3s linear;
 	border-left: 5px solid #717070;
+	height: auto;
 }
 .right_article ul li:hover {
 	background-color: #717070;
@@ -347,7 +365,7 @@ body {
 }
 .left_article {
 	width: 100%;
-	height: auto;
+	height: 500px;
 }
 .right_article {
 	width: 100%;
@@ -403,12 +421,7 @@ body {
 	margin-bottom: 10px;
 	margin-left: 7%;
 }
-.left_article {
-	height: auto;
-}
-.right_article {
-	height: auto;
-	padding-bottom: 27px;
+
 }
 .columns {
 	width: 50%;
@@ -422,7 +435,7 @@ body {
 	padding-left: 25px;
 	padding-right: 25px;
 }
-}
+
 
 @media (min-width: 1001px) {
 }
@@ -462,14 +475,6 @@ body {
 .body {
 }
 
-section {	
-	border-top: 5px solid gray;
-	border-left: 5px solid gray;
-	border-right: 5px solid gray;
-	padding: 5px;
-	height: 500px;
-}
-	
 nav a {
   text-decoration: none;
   color: white;
