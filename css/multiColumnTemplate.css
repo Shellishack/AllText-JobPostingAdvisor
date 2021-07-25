@@ -110,7 +110,7 @@
 .noDisplay {
 	display: none;
 }
-.container .left_article h3 {
+.container .left_article h2 {
 	padding-left: 5%;
 	padding-right: 5%;
 	margin-top: 5%;
@@ -118,13 +118,29 @@
 	font-weight: bold;
 	text-transform: uppercase;
 }
-.container .left_article p {
-	padding-left: 5%;
+.container .left_article h3 {
+	padding-left: 10%;
+	padding-right: 5%;
+	margin-top: 5%;
+	color: #0F0F0F;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.study{
+	color: #0F0F0F;
+	text-decoration: none;
+	font-weight: bold;
+}
+.study:hover{
+	color: rgba(112,112,112,1.00);
+}
+.container .left_article ul {
+	padding-left: 15%;
 	padding-right: 5%;
 	text-align: justify;
 	line-height: 24px;
-	margin-top: 30px;
-	margin-bottom: 15px;
+	margin-top: -10px;
+	margin-bottom: 5px;
 	color: #717070;
 }
 .right_article {
