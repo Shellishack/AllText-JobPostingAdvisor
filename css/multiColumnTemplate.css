@@ -261,7 +261,6 @@ body {
 	height: auto;
 }
 .placeholder {
-	background-color: white;
 	width: 100%;
 	margin-top: 22PX;
 	margin-right: 0px;
@@ -271,8 +270,8 @@ body {
 	padding-right: 0px;
 	padding-bottom: 0px;
 	padding-left: 0px;
-	max-width: 1000px;
-	max-height: 1000px;
+	max-width: 400px;
+	max-height: 200px;
 	height: auto;
 }
 .columns {
