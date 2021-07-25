@@ -1,7 +1,7 @@
 @charset "UTF-8";
 .container {
 	background-color: #FFFFFF;
-	width: 1260px;
+	width: 1280px;
 	margin-left: auto;
 	margin-right: auto;
 	border-bottom-width: 0px;
@@ -102,7 +102,7 @@
 section{
 	border: 5px solid gray;
 	padding: 30px;
-	height: 1000px;
+	height: 575px;
 	width: auto;
 }
 .left_article {
@@ -116,14 +116,15 @@ section{
 	padding-left: 5%;
 	padding-right: 5%;
 	margin-top: 5%;
+	margin-bottom: 10%;
 	color: #0F0F0F;
 	font-weight: bold;
 	text-transform: uppercase;
 	height: auto;
 }
 .container .left_article h3 {
-	padding-left: 10%;
-	padding-right: 5%;
+	margin-left: 5%;
+	margin-right: 5%;
 	margin-top: 5%;
 	color: #0F0F0F;
 	font-weight: bold;
@@ -131,16 +132,16 @@ section{
 	height: auto;
 }
 .study{
-	color: #7C7C79;
+	color: #000000;
 	text-decoration: none;
 	font-weight: bold;
 	height: auto;
 }
 .study:hover{
-	color: #2D2D2C;
+	color: #8E8E8B;
 }
 .container .left_article ul {
-	margin-left: 15%;
+	margin-left: 5%;
 	margin-right: 5%;
 	text-align: justify;
 	line-height: 24px;
@@ -148,6 +149,11 @@ section{
 	height: auto;
 }
 .container .left_article ol {
+	margin-left: 5%;
+	margin-right: 5%;
+	text-align: justify;
+	line-height: 24px;
+	color: #0F0F0F;
 	height: auto;
 }
 .container .left_article li {
