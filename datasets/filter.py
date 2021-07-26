@@ -1,9 +1,15 @@
+# This program extract key requirements/skills from job posts
+# Then parse them into a list of sentences
+# Finally, it filters the datasets to make sure every entry has a length between 20-150 characters
+
 import pandas
 from htmlparse import MyHTMLParser
 
+entrysize_min=20
+entrysize_max=150
 
 def parse_fl1(astr):
-    flag1=False # whether to start parse
+    flag1=False # whether to start parsing
     result=[]
 
     oneentry=""
@@ -11,7 +17,9 @@ def parse_fl1(astr):
         if flag1:
             if x==';' or x=='.':
                 flag1=False
-                result.append(oneentry.strip())
+                oneentry.strip()
+                if entrysize_max>=len(oneentry) and entrysize_min<=len(oneentry):
+                    result.append(oneentry.strip())
                 oneentry=""
 
             elif x=='\n':
@@ -30,7 +38,7 @@ def parse_fl1(astr):
 #fl2 contains xml file.
 keytoken=['skill','demand','qualification','requirement','experience','abilit','criteria','responsibilit']
 def parse_fl2(astr):
-    parse=MyHTMLParser(keytoken)
+    parse=MyHTMLParser(keytoken,entrysize_max,entrysize_min)
     parse.feed(astr)
     return parse.filtered_result
 
@@ -56,7 +64,7 @@ def main():
 
     #filter dataset 2
     fl2=pandas.read_csv('data_jobposts_2.csv',usecols=['Job Description'])
-    # fl2=pandas.read_csv('data_jobpost2.csv',skiprows=range(1,22),nrows=2,usecols=['Job Description'])
+    # fl2=pandas.read_csv('data_jobposts_2.csv',skiprows=range(1,204),nrows=1,usecols=['Job Description'])
     
     for x in range(len(fl2)):
         if isinstance(fl2.loc[x][0],str):
