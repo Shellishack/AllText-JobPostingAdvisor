@@ -208,7 +208,7 @@ while x <targetnum:
     for i in keywords:
         for y in range(length_fl):
             onesentence=fl.iloc[y][0]
-            if i in onesentence:
+            if i in onesentence.lower():
                 exclusionlist.append(y)
                 
     # print(exclusionlist)
