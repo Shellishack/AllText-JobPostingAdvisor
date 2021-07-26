@@ -223,6 +223,6 @@ while x <targetnum:
     handlablledfl=handlablledfl.append(newrows_handlabelled,ignore_index=True)
     keywordfl=keywordfl.append(pandas.DataFrame(newrows_keywords,columns=['bias','keyword','againstgroup']),ignore_index=True)
     handlablledfl.to_csv(path_or_buf='handlabelled_data_jobposts.csv',index=False)
-    keywordfl.to_csv(path_or_buf='keyword.csv',index=False)
+    keywordfl.to_csv(path_or_buf='keywords.csv',index=False)
 
     
