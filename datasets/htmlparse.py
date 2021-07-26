@@ -2,7 +2,7 @@ from html.parser import HTMLParser
 
 
 class MyHTMLParser(HTMLParser):
-    def __init__(self,keytoken):
+    def __init__(self,keytoken,entrysize_max,entrysize_min):
         self.p=False
         self.ul=False
         self.li=False
@@ -13,6 +13,8 @@ class MyHTMLParser(HTMLParser):
 
         self.keytoken=keytoken
         self.filtered_result=[]
+        self.entrysize_max=entrysize_max
+        self.entrysize_min=entrysize_min
         super().__init__()
 
     def handle_starttag(self, tag, attrs):
@@ -51,8 +53,20 @@ class MyHTMLParser(HTMLParser):
 
         elif self.ul and self.li:
             newsentence=data.strip().strip('\n').strip('\r')
-            if len(newsentence)!=0:
-                self.cur_section_result.append(newsentence)
+            length=len(newsentence)
+            if length!=0:
+                
+                #about if unicode>256
+                for x in newsentence:
+                    if ord(x)>256 or ord(x)==233:
+                        # newsentence=newsentence[0:x]+newsentence[x+1:length]
+                        # length-=1
+                        newsentence=""
+                        break
+
+
+                if newsentence!="" and self.entrysize_max>=len(newsentence) and self.entrysize_min<=len(newsentence):
+                    self.cur_section_result.append(newsentence.strip())
                 
         
 
