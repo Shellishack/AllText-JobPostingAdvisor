@@ -19,7 +19,7 @@ def parse_fl1(astr):
                 flag1=False
                 oneentry.strip()
                 if entrysize_max>=len(oneentry) and entrysize_min<=len(oneentry):
-                    result.append(oneentry.strip())
+                    result.append(oneentry.strip().lower())
                 oneentry=""
 
             elif x=='\n':

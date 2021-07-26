@@ -66,7 +66,7 @@ class MyHTMLParser(HTMLParser):
 
 
                 if newsentence!="" and self.entrysize_max>=len(newsentence) and self.entrysize_min<=len(newsentence):
-                    self.cur_section_result.append(newsentence.strip())
+                    self.cur_section_result.append(newsentence.strip().lower())
                 
         
 
