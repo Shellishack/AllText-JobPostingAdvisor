@@ -43,6 +43,7 @@ i=random.randrange(length_fl)
 
 newrows_handlabelled=pandas.DataFrame()
 while x <targetnum:
+    exclusionlist=[]
     newrows_keywords=[]
     print("---------------------------------------------------------------")
     print(str(x)+" entries labelled ("+str(x)+"/"+str(targetnum)+")")
@@ -73,7 +74,7 @@ while x <targetnum:
         type_bitmap_str=""
         for y in range(len(disabilitytypes)):
             type_bitmap_str+='0'
-
+        exclusionlist.append(i)
         newrows_handlabelled=pandas.DataFrame([[cursentence,0,type_bitmap_str]],columns=['jobrequiements','bias','againstgroup'])
         
 
@@ -107,7 +108,7 @@ while x <targetnum:
                 break
             except ValueError:
                 print("Please enter a valid value.")
-
+        exclusionlist.append(i)
         newrows_handlabelled=pandas.DataFrame([[cursentence,1,type_bitmap_str]],columns=['jobrequiements','bias','againstgroup'])
         
 
@@ -131,7 +132,7 @@ while x <targetnum:
                             print("Please enter a valid value.")
                             flag_reinput=True
                             break
-                        keywords.append(parsed_cursentence[int(y)-1])
+                        keywords.append(parsed_cursentence[int(y)-1].lower())
                     if flag_reinput:
                         continue
                 else:
@@ -203,11 +204,11 @@ while x <targetnum:
 
     # drop entries that contain labelled keywords
     print("keywords:",keywords)
-    exclusionlist=[]
+    
     for i in keywords:
         for y in range(length_fl):
             onesentence=fl.iloc[y][0]
-            if i in onesentence:
+            if i in onesentence.lower():
                 exclusionlist.append(y)
                 
     # print(exclusionlist)
