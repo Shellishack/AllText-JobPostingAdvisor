@@ -1,7 +1,7 @@
 import pandas
 import random
 
-targetnum=50
+targetnum=200
 disabilitytypes=['developmental','intellectual','mental','physical','sensory']
 
 def parse_sentence(astr):
