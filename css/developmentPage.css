@@ -63,13 +63,20 @@ nav a:hover {
 	color: rgba(112,112,112,1.00);
 }
 
-section{
-	border: 5px solid gray;
+section {
+	border-top: 5px solid gray;
+	border-left: 5px solid gray;
+	border-right: 5px solid gray;
+	border-bottom: 0px solid gray;
 	padding: 30px;
 	margin: 0px;
-	height: 500px;
 	width: auto;
-	
+}
+.section1{
+	height: 500px;
+}
+.section2{
+	height: 500px;
 }
 
 .left_article {
