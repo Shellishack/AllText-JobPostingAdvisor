@@ -102,31 +102,38 @@
 section{
 	border: 5px solid gray;
 	padding: 30px;
-	height: 575px;
+	height: 700px;
 	width: auto;
+	
 }
 .left_article {
 	background-color: #FFFFFF;
 	width: 50%;
 	float: left;
-	color: #717070;
 	height: auto;
+}
+.inner_border{
+	margin: 3%;
+	border: 3px solid gray;
+	border-radius: 10px;
+	background-color: #DEF2F6;
 }
 .container .left_article h2 {
 	padding-left: 5%;
 	padding-right: 5%;
 	margin-top: 5%;
-	margin-bottom: 10%;
-	color: #0F0F0F;
+	margin-bottom: 7%;
+	color: #3C3D3D;
 	font-weight: bold;
 	text-transform: uppercase;
 	height: auto;
+	font-size: 200%;
 }
 .container .left_article h3 {
 	margin-left: 5%;
 	margin-right: 5%;
 	margin-top: 5%;
-	color: #0F0F0F;
+	color: #3C3D3D;
 	font-weight: bold;
 	text-transform: uppercase;
 	height: auto;
@@ -145,7 +152,7 @@ section{
 	margin-right: 5%;
 	text-align: justify;
 	line-height: 24px;
-	color: #0F0F0F;
+	color: #3C3D3D;
 	height: auto;
 }
 .container .left_article ol {
@@ -153,7 +160,7 @@ section{
 	margin-right: 5%;
 	text-align: justify;
 	line-height: 24px;
-	color: #0F0F0F;
+	color: #3C3D3D;
 	height: auto;
 }
 .container .left_article li {
@@ -223,6 +230,7 @@ section{
 	letter-spacing: 2px;
 }
 .placeholder {
+	margin-top: 10%;
 	width: 100%;
 	height: 100%;
 }
