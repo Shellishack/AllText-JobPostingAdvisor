@@ -5,13 +5,20 @@
 <title>Response Page</title>
 <link href="../css/multiColumnTemplate.css" rel="stylesheet" type="text/css">
 	<style>
-		
+		body {
+			margin-bottom:auto;
+		}
+		.bb {
+			border-top: 5px solid grey;
+			border-left: 5px solid grey;
+			border-right: 5px solid grey;
+			height:1000px;
+		}	
 		.text {
-			margin-left: 400px;
-			margin-right: 400px;
+			margin-left: 100px;
+			margin-right: 100px;
 		}
 			
-		
 		.post {
 			border: thin;
 			border-color: rgba(1,127,245,1.00);
@@ -97,10 +104,11 @@
 			background-color:rgba(193,5,8,1.00); 
 			border:none;color:white; padding:12px 32px; 
 			font-size:16px;
+			border-radius:10px;
 			transition-duration: 0.3s;
 			cursor:pointer;
 			margin-left:50px;
-			margin-top:10px;
+			margin-top:8px;
 			width: 300px;
 		}
 		
@@ -210,13 +218,13 @@ external clients
       </ul>
     </nav>
   </header>
-<br>
+			<div class="bb">
 	<div class="text">
 <div>
   <p id="output"></p>
   <p>Follow the "Show next" button to see our suggestions.</p>
   <br>
-</div>
+
 			</div>
 <div class="post">
   <h3 style="text-align: center">Your Posting</h3>
@@ -228,8 +236,11 @@ external clients
 		</aside>
 		<button onclick="show_next_suggestion()" class="button" style="position:relative;left:900px;top:-500px;">Show Next</button>
 	</div>
-		
-		/* button chatbot */
+</div>
+			  <footer class="secondary_header footer">
+    <div class="copyright">&copy;2021 -&nbsp;Website Title (Our Product Name) <strong>&nbsp;</strong></div>
+  </footer>
+			</div>
 		
 		<button class="open-button" onclick="openchatbot()">Use Our Chatbot</button>
 
