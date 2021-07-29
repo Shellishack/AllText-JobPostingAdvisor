@@ -1,0 +1,254 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Response Page</title>
+<link href="../css/multiColumnTemplate.css" rel="stylesheet" type="text/css">
+	<style>
+		body {
+			margin-bottom:auto;
+		}
+		.bb {
+			border-top: 5px solid grey;
+			border-left: 5px solid grey;
+			border-right: 5px solid grey;
+			height:1000px;
+		}	
+		.text {
+			margin-left: 100px;
+			margin-right: 100px;
+		}
+			
+		.post {
+			border: thin;
+			border-color: rgba(1,127,245,1.00);
+			width: 40%;
+			line-height:25px;
+			
+			
+		}
+		.yr {
+			box-sizing:content-box;
+			border-radius:25px;
+			width: 400px;
+			height: 600px;
+			padding:30px;
+			border: 3px solid rgba(4,159,206,1.00);
+			
+		}
+		
+		.suggestion {
+			color:black;
+			text-align: left;
+			
+		}
+		.suggest-text {
+			box-sizing:content-box;
+			border-radius:25px;
+			width: 400px;
+			height: 400px;
+			padding:30px;
+			border: 3px solid rgba(4,159,206,1.00);
+			line-height: 25px;
+		}
+		
+		.button {
+			background-color:rgba(4,122,150,1.00); 
+			border:none;color:white; padding:12px 32px; 
+			font-size:16px;
+			transition-duration: 0.3s;
+			cursor:pointer;
+		}
+		.button:hover {
+			background-color:rgba(123,216,250,1.00);		
+		}
+		
+		.highlight {
+			background-color: rgba(180,240,252,1.00);
+		}
+	
+		/* Bot Button */
+		
+		.open-button {
+			background-color:rgba(241,158,11,1.00); 
+			border:none;color:white; padding:12px 32px; 
+			font-size:16px;
+			transition-duration: 0.3s;
+			cursor:pointer;
+			position: fixed;
+			right: 40px;
+			bottom: 30px;
+			border-radius: 10px;
+			
+			
+		}
+		
+		.open-button:hover {
+			background-color:rgba(168,154,1,1.00);		
+		}
+		
+		.chat-popup {
+			display: none;
+			position: fixed;
+			bottom: 30px;
+			right: 30px;
+			height: 640px;
+			width: 400px;
+			border: 3px solid #f1f1f1;
+			border-radius: 15px;
+			z-index: 9;
+			background-color:aliceblue;
+		}
+		
+		.cancel {
+			background-color:rgba(193,5,8,1.00); 
+			border:none;color:white; padding:12px 32px; 
+			font-size:16px;
+			border-radius:10px;
+			transition-duration: 0.3s;
+			cursor:pointer;
+			margin-left:50px;
+			margin-top:8px;
+			width: 300px;
+		}
+		
+		.cancel:hover {
+			background-color:indianred;
+		}
+		
+		.chatbot_header {
+			text-align: center;
+		}
+	</style>
+	<link href="../css/others.css" rel="stylesheet" type="text/css">
+<script>
+		
+			
+	sentence_array = ["s1", "s2", "s3"];
+	suggestion_array = ["a1", "a2", "a3"];
+	const len = sentence_array.length;
+	var suggest_count = 0;
+	const post = `
+Strong process development and leadership skills
+<br> Excellent interpersonal skills & client service skills
+<br> Strong commitment to excellence and attention to detail
+<br> "s1"
+<br> Proven problem solver with solid analytical skills
+<br> Exceptional time-management skills and the ability to manage multiple tasks
+<br> Ability to develop effective working relationships with staff, peers, and industry
+colleagues/contacts in a team environment.
+<br> Excellent computer skills, particularly Excel and pivot tables, and the ability to learn new
+computer programs efficiently
+<br> "s2"
+<br> Proven ability to monitor and uphold high quality of service and products to both internal and
+external clients
+<br> Able to think globally and work with various cultures/backgrounds
+<br> Demonstrated flexibility in adapting to a wide variety of tasks and functions
+<br> Strong multi-tasking and prioritization skills with the ability to adapt to change
+<br> "s3"`;
+	
+		window.onload = function(){
+			var changes = 3;  // will be calculated from backend
+			const first_sentence = "We have provided " + changes + " suggestions to your document."
+			document.getElementById("output").innerHTML = first_sentence;
+			document.getElementById('posting').innerHTML = post;
+		}
+	
+	function highlight(text) {
+		var inputText = document.getElementById("posting");
+		inputText.innerHTML = post;
+  		var innerHTML = post;
+  		var index = innerHTML.indexOf(text);
+  		if (index >= 0) { 
+   			innerHTML = innerHTML.substring(0,index) + "<span class='highlight'>" + innerHTML.substring(index,index+text.length) + "</span>" + innerHTML.substring(index + text.length);
+   			inputText.innerHTML = innerHTML;
+  		}
+	}
+	
+	function show_next_suggestion(){
+		console.log(suggest_count);
+		if (suggest_count >= len) suggest_count = 0;
+		const suggestion = "Your<br>" + sentence_array[suggest_count] + "<br>could be<br>" +
+			  suggestion_array[suggest_count];
+		highlight(sentence_array[suggest_count]);
+		suggest_count = suggest_count + 1;
+		document.getElementById("s2").innerHTML = suggestion;
+		
+		
+	}
+
+	var xhr = new XMLHttpRequest();
+    xhr.open('GET', "https://webchat.botframework.com/api/tokens", true);
+    xhr.setRequestHeader('Authorization', 'BotConnector ' + 'YOUR SECRET HERE');
+    xhr.send();
+    xhr.onreadystatechange = processRequest;
+
+    function processRequest(e) {
+      if (xhr.readyState == 4  && xhr.status == 200) {
+        var response = JSON.parse(xhr.responseText);
+        document.getElementById("chat").src="https://webchat.botframework.com/embed/<botname>?t="+response
+      }
+    }
+	
+	/* bot buttom */
+	
+	function openchatbot() {
+		document.getElementById("mychatbot").style.display = "block";
+	}
+	
+	function closechatbot() {
+		document.getElementById("mychatbot").style.display = "none";
+	}
+	
+	</script>
+	</head>
+	<body>
+		<div class="container">
+<header>
+    <div class="primary_header" style:>
+      <h1 class="title"> Website Title (Our Product Name) - Main</h1>
+    </div>
+    <nav class="secondary_header" id="menu">
+      <ul>
+        <li><a href="employerPage.html">Employer</a></li>
+        <li><a href="pages/employeePage.html">Employee</a></li>
+		<li><a href="developmentPage.html">Development</a></li>
+        <li><a href="aboutUsPage.html">About Us</a></li>
+		<li><a href="../NewIndex.html">Main</a></li>
+      </ul>
+    </nav>
+  </header>
+			<div class="bb">
+	<div class="text">
+<div>
+  <p id="output"></p>
+  <p>Follow the "Show next" button to see our suggestions.</p>
+  <br>
+
+			</div>
+<div class="post">
+  <h3 style="text-align: center">Your Posting</h3>
+  <p class="yr" id="posting">sample</p>
+</div>
+	<aside class="suggestion" style="position:relative;left:600px;top:-525px;">
+		<h3 style="position:relative;left:200px;">Suggestions</h3>
+		<p class="suggest-text" id="s2">Click "Show Next" to view your suggestions.</p>
+		</aside>
+		<button onclick="show_next_suggestion()" class="button" style="position:relative;left:900px;top:-500px;">Show Next</button>
+	</div>
+</div>
+			  <footer class="secondary_header footer">
+    <div class="copyright">&copy;2021 -&nbsp;Website Title (Our Product Name) <strong>&nbsp;</strong></div>
+  </footer>
+			</div>
+		
+		<button class="open-button" onclick="openchatbot()">Use Our Chatbot</button>
+
+		<div class="chat-popup" id="mychatbot">
+			<h1 class="chatbot_header">Chatbot</h1>
+			<iframe src='https://webchat.botframework.com/embed/WEA-AI-WebBot-1?s=7VAatpKc7RY.HlsdICc1gyBoXZOrTRKPL0Hik3Z_MOCcvt4eWsNPObk'  style='min-width: 400px; width: 40%; min-height: 500px;'></iframe>
+			<button type="button" class="cancel" onclick="closechatbot()">Close</button>
+		</div>
+			
+</body>
+</html>
