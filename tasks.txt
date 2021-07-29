@@ -1,0 +1,24 @@
+1. Front page
+	A. Buttons(top)
+		- Links for submission (employer)
+			- Job Posting boxes
+				- Brief job description
+				- Company background
+				- Job requirement
+				- Prefered contact number(employer)
+				- Submission button
+			- Extra submission dropbox
+				- Submission button	
+				
+		- Links for submission (employee)
+			- Physical Activities Assessment
+			- Previous/Next button
+			- Submission button
+			
+		- About Us
+		 
+	B. Motivation
+	C. Project overview
+	D. AI chat bot section 
+		
+		
