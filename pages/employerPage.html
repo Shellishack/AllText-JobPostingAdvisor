@@ -34,19 +34,7 @@
 		
       <h2>Job posting process</h2>
 		
-      <div class="document">
-	    <p>
-	      <aside class="ds" style="position:absolute;left:1070px;top:350px;padding:40px 60px; box-sizing:content-box"> 
-		    Or submit your files here:
-			  <form>
-			    <input type="file" id="myFile" name="filename">
-				<input type="submit">
-			  </form>
-		  </aside>
-	    </p>
-      </div>
-	
-	  <div class="template">
+	  <article class="template">
 		<h3>Posting Job via Template</h3>
 	    <form>
 		  <label for="Cname">Company Name:</label><br>
@@ -54,20 +42,29 @@
 		  <label for="contact">Email Address:</label><br>
 		  <textarea name="contact" required></textarea><br><br>
 		  <label for="Cback">Company Background:</label><br>
-		  <textarea name="Cback" required></textarea><br><br>
+		  <textarea class="bigBox" name="Cback" required></textarea><br><br>
 		  <label for="Jdes">Job Description:</label><br>
-		  <textarea name="Jdes" required></textarea><br><br>
+		  <textarea class="bigBox" name="Jdes" required></textarea><br><br>
 		  <label for="Jre">Job Requirement:</label><br>
-		  <textarea name="Jre" required></textarea><br><br>	
+		  <textarea class="bigBox" name="Jre" required></textarea><br><br>
+		  <div>
+		    <button id="final">Submit</button>
+		    <button><a class="buttonLink" href="View Result.html">Proceed</a></button>
+          </div>
 		</form>
-
-		<div>
-		  <button id="final"  class="button">Submit</button>
-		  <aside style="position:relative;left:200px;top:-42px;"><button class="button"><a href="View Result.html" class="next">Proceed</a></button></aside>
-        </div>
-	  </div>
-	
-</section>
+		
+	  </article>
+	  
+	<aside class="document"> 
+	    <h3>Submitting your document</h3>
+	     <form>
+		   <input type="file" id="myFile" name="filename">
+		   <input type="submit">
+		 </form>
+	  </aside>
+	  
+		
+    </section>
 	
 	<footer class="secondary_header footer">
       <div class="copyright">&copy;2021 -&nbsp;Website Title (Our Product Name) <strong>&nbsp;</strong></div>
