@@ -15,7 +15,7 @@ data = {
     "data":
     [
         {
-            'jobrequirements': "example_value",
+            'jobrequirements': "Attention to detail and high level of accuracy",
         },
     ],
 }

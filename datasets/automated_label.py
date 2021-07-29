@@ -9,7 +9,7 @@ import multiprocessing
 from nltk.corpus import wordnet
 from nltk import WordNetLemmatizer as wnl
 
-disabilitytypes=['developmental','intellectual','mental','physical','sensory']
+disabilitytypes=['intellectual','mental','physical','sensory']
 
 fl_keyword=pandas.read_csv('./handlabelled_data/keywords_final.csv')
 fl_data1=pandas.read_csv('filtered_data_1.csv')
@@ -37,7 +37,7 @@ def get_pos(astr):
     return wordnet.NOUN
 
 def get_lemma(astr):
-    return wnl().lemmatize(astr,get_pos(astr))
+    return wnl().lemmatize(astr,pos=get_pos(astr))
 
 
 
@@ -91,17 +91,18 @@ def label(location,patchsize,coreid):
             fl_result.to_csv(path_or_buf=outputfile,index=False)
             timestamp=newtime
         onesentence=tokenize(fl_data_merged.at[x,'jobrequirements'])
-        result_againstgroup=get_nulldisabilitytypes_bitmap()
+        result_againstgroup=0
         result_bias=0
         for y in onesentence:
             for z in range(len(keywordlist)):
                 if get_lemma(y)==keywordlist[z]:
                     # biased
-                    result_againstgroup=dec_to_binstr(binstr_to_dec(result_againstgroup) | binstr_to_dec(str(fl_keyword.at[z,'againstgroup'])))
+                    result_againstgroup=result_againstgroup | binstr_to_dec(str(fl_keyword.at[z,'againstgroup']))
 
-        if result_againstgroup!=get_nulldisabilitytypes_bitmap():
+        if result_againstgroup!=0:
             result_bias=2
         
+        result_againstgroup=dec_to_binstr(result_againstgroup)
         newrow=[{'jobrequirements':fl_data_merged.at[x,'jobrequirements'],'bias':result_bias,'againstgroup':result_againstgroup}]
         fl_result=fl_result.append(newrow,ignore_index=True)
 
