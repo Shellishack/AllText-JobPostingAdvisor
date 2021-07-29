@@ -4,7 +4,13 @@ import random
 targetnum=200
 disabilitytypes=['developmental','intellectual','mental','physical','sensory']
 
-def parse_sentence(astr):
+def get_nulldisabilitytypes_bitmap():
+    type_bitmap_str=""
+    for y in range(len(disabilitytypes)):
+        type_bitmap_str+='0'
+    return type_bitmap_str
+
+def tokenize(astr):
     lst=[]
     aword=""
     for x in astr:
@@ -21,6 +27,7 @@ def parse_sentence(astr):
     if aword!="":
         lst.append(aword)
     return lst
+    
 #-------------------------------------------------
 #Read files
 
@@ -35,7 +42,7 @@ fl=fl1.append(fl2,ignore_index=True)
 # length_fl2=len(fl2)
 length_fl=len(fl)
 keywords=[]
-handlablledfl=pandas.DataFrame(columns=['jobrequiements','bias','againstgroup'])
+handlablledfl=pandas.DataFrame(columns=['jobrequirements','bias','againstgroup'])
 keywordfl=pandas.DataFrame(columns=['bias','keyword','againstgroup'])
 
 x=0
@@ -71,9 +78,7 @@ while x <targetnum:
     if answer_bias==0:
         
         #add this entry to new file
-        type_bitmap_str=""
-        for y in range(len(disabilitytypes)):
-            type_bitmap_str+='0'
+        type_bitmap_str=get_nulldisabilitytypes_bitmap()
         exclusionlist.append(i)
         newrows_handlabelled=pandas.DataFrame([[cursentence,0,type_bitmap_str]],columns=['jobrequiements','bias','againstgroup'])
         
@@ -116,7 +121,7 @@ while x <targetnum:
         print("Which word(s) make you believe that this sentence is biased?")
         print("Enter the corresponding index number(s) of these word(s), separated by a single space.")
         print("For example, '1 2 3' to select all words in 'I love coding'.")
-        parsed_cursentence=parse_sentence(cursentence)
+        parsed_cursentence=tokenize(cursentence)
         for y in range(len(parsed_cursentence)):
             print(y+1,"\t",parsed_cursentence[y])
 
