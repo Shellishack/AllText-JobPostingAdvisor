@@ -1,66 +1,21 @@
 <!Doctype html>
 <html>
+	
 <head>
 	
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Employer</title>
-  <link href="../css/others.css" rel="stylesheet" type="text/css">
+  <link href="../css/employerPage.css" rel="stylesheet" type="text/css">
 	
-  <style>
-    .text {
-		border-top: 5px solid grey;
-		border-left: 5px solid grey;
-		border-right: 5px solid grey;
-		height:1200px;
-	}
-	aside.ds {
-		background-color:rgba(227,221,222,1.00);
-		border: 3px black solid;
-		border-color: rgba(86,86,86,1.00);
-	}
-
-	.button {
-		background-color:rgba(4,122,150,1.00); 
-		border:none;color:white; padding:12px 32px; 
-		font-size:16px;
-		transition-duration: 0.3s;
-		position:relative;
-		left:30px;
-		cursor:pointer;
-		border-radius:5px;
-	}
-	.button:hover {
-		background-color:rgba(123,216,250,1.00);		
-	}
-	.next {
-		text-decoration: none;
-		color:white;
-		target:_blank;
-	}
-	  form {
-		  max-width:600px;
-		  padding:10px;
-	  }
-	  textarea {
-		  border: 2px solid grey;
-		  border-radius: 10px;
-		  background-color:rgba(227,221,222,1.00);
-		  resize:none;
-		  width: 300px;
-		  padding:10px;
-	  }
-	  textarea:focus {
-		  background-color:rgba(247,242,242,1.00);
-	  }
-  </style>
 </head>
 	
 <body>
-  <div class="container">
+	
+  <div class="container"> 
 	  
-	<header>
+    <header>
 	  <div class="primary_header">
 	    <h1 class="title"> Website Title (Our Product Name) -&nbsp; Employer&nbsp;&nbsp;</h1>
 	  </div>
@@ -75,53 +30,52 @@
     </nav>
   </header>
 	  
-  <div class="text">
-		<h4 style="text-align:left; position:relative; left:30px;">You can submit via provided template or submit your document directly.</h4>
+    <section>
 		
-<!-- I don't know how to get the template you used so I just make some functionalities -->
+      <h2>Job posting process</h2>
 		
-	<div class="document">
-		
-  		<p>
-			<aside class="ds" style="position:absolute;left:1070px;top:350px;padding:40px 60px; box-sizing:content-box"> 
-				Or submit your files here:
-				<form>
-					<input type="file" id="myFile" name="filename">
-					<input type="submit">
-				</form>
-			</aside>
-	  </p>
-  
-	</div>
+      <div class="document">
+	    <p>
+	      <aside class="ds" style="position:absolute;left:1070px;top:350px;padding:40px 60px; box-sizing:content-box"> 
+		    Or submit your files here:
+			  <form>
+			    <input type="file" id="myFile" name="filename">
+				<input type="submit">
+			  </form>
+		  </aside>
+	    </p>
+      </div>
 	
-	
-	
-	<div class="template">
-		<form action="">
-		<label for="Cname">Company name:</label><br>
-		<textarea name="Cname" required></textarea><br><br>
-		<label for="contact">Email address:</label><br>
-		<textarea name="contact" required></textarea><br><br>
-		<label for="Cback">Company background:</label><br>
-		<textarea name="Cback" style="width:600px; height:200px;"></textarea><br><br>
-		<label for="Jdes">Job Description:</label><br>
-		<textarea name="Jdes" required style="width:600px; height:200px;"></textarea><br><br>
-		<label for="Jre">Job Requirement:</label><br>
-		<textarea name="Jre" required style="width:600px; height:200px;"></textarea><br><br>
-			
+	  <div class="template">
+		<h3>Posting Job via Template</h3>
+	    <form>
+		  <label for="Cname">Company Name:</label><br>
+		  <textarea name="Cname" required></textarea><br><br>
+		  <label for="contact">Email Address:</label><br>
+		  <textarea name="contact" required></textarea><br><br>
+		  <label for="Cback">Company Background:</label><br>
+		  <textarea name="Cback" required></textarea><br><br>
+		  <label for="Jdes">Job Description:</label><br>
+		  <textarea name="Jdes" required></textarea><br><br>
+		  <label for="Jre">Job Requirement:</label><br>
+		  <textarea name="Jre" required></textarea><br><br>	
 		</form>
-		
-		<div>
-		<button id="final"  class="button">Submit</button>
-		<aside style="position:relative;left:200px;top:-42px;"><button class="button"><a href="View Result.html" class="next">Proceed</a></button></aside>
-			</div>
-	</div>
-	</div>
-	  <footer class="secondary_header footer">
-    <div class="copyright">&copy;2021 -&nbsp;Website Title (Our Product Name) <strong>&nbsp;</strong></div>
-  </footer>	
-  </div>
 
+		<div>
+		  <button id="final"  class="button">Submit</button>
+		  <aside style="position:relative;left:200px;top:-42px;"><button class="button"><a href="View Result.html" class="next">Proceed</a></button></aside>
+        </div>
+	  </div>
+	
+</section>
+	
+	<footer class="secondary_header footer">
+      <div class="copyright">&copy;2021 -&nbsp;Website Title (Our Product Name) <strong>&nbsp;</strong></div>
+    </footer>	
+ 
+  </div>	
+	
 </body>
+
 </html>
 
