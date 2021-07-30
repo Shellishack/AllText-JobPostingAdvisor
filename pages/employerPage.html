@@ -55,13 +55,20 @@
 		  background-color:rgba(247,242,242,1.00);
 	  }
   </style>
+
   <script src="processdata.js">
+
+	  function process_data_front() {
+	  const companyname = document.getElementbyId("companyname").value;
+	  const jobrequirement = document.getElementById("jobrequirement").value;
+	  process_data(companyname, jobrequirement);
+	  }
+
 </script>
 </head>
 	
 <body>
   <div class="container">
-	  
 	<header>
 	  <div class="primary_header">
 	    <h1 class="title"> Website Title (Our Product Name) -&nbsp; Employer&nbsp;&nbsp;</h1>
@@ -114,7 +121,7 @@
 		</form>
 		
 		<div>
-		<button class="button" onclick="get_form_data();"><a href="View Result.html" class="next">Proceed</a></button></aside>
+		<button class="button" onclick="process_data_front();"><a href="View Result.html" class="next">Proceed</a></button></aside>
 			</div>
 	</div>
 	</div>
