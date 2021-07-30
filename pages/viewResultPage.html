@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Response Page</title>
+<link href="../css/others.css" rel="stylesheet" type="text/css">
+	<style>
+		
+		.text {
+			margin-left: 400px;
+			margin-right: 400px;
+		}
+		body {
+			background-color:rgba(234,246,248,1.00);
+			
+		}
+			
+		
+		.post {
+			border: thin;
+			border-color: rgba(1,127,245,1.00);
+			width: 40%;
+			line-height:25px;
+			
+			
+		}
+		.yr {
+			box-sizing:content-box;
+			border-radius:25px;
+			width: 400px;
+			height: 600px;
+			padding:30px;
+			border: 3px solid rgba(4,159,206,1.00);
+			
+		}
+		
+		.suggestion {
+			color:black;
+			text-align: left;
+			
+		}
+		.suggest-text {
+			box-sizing:content-box;
+			border-radius:25px;
+			width: 400px;
+			height: 400px;
+			padding:30px;
+			border: 3px solid rgba(4,159,206,1.00);
+			line-height: 25px;
+		}
+		
+		.button {
+			background-color:rgba(4,122,150,1.00); 
+			border:none;color:white; padding:12px 32px; 
+			font-size:16px;
+			transition-duration: 0.3s;
+		}
+		.button:hover {
+			background-color:rgba(123,216,250,1.00);		
+		}
+		
+		.highlight {
+			background-color: rgba(180,240,252,1.00);
+		}
+	
+	</style>
+<script>
+		
+			
+	sentence_array = ["s1", "s2", "s3"];
+	suggestion_array = ["a1", "a2", "a3"];
+	const len = sentence_array.length;
+	var suggest_count = 0;
+	const post = `
+Strong process development and leadership skills
+<br> Excellent interpersonal skills & client service skills
+<br> Strong commitment to excellence and attention to detail
+<br> "s1"
+<br> Proven problem solver with solid analytical skills
+<br> Exceptional time-management skills and the ability to manage multiple tasks
+<br> Ability to develop effective working relationships with staff, peers, and industry
+colleagues/contacts in a team environment.
+<br> Excellent computer skills, particularly Excel and pivot tables, and the ability to learn new
+computer programs efficiently
+<br> "s2"
+<br> Proven ability to monitor and uphold high quality of service and products to both internal and
+external clients
+<br> Able to think globally and work with various cultures/backgrounds
+<br> Demonstrated flexibility in adapting to a wide variety of tasks and functions
+<br> Strong multi-tasking and prioritization skills with the ability to adapt to change
+<br> "s3"`;
+	
+		window.onload = function(){
+			var changes = 3;  // will be calculated from backend
+			const first_sentence = "We have provided " + changes + " suggestions to your document."
+			document.getElementById("output").innerHTML = first_sentence;
+			document.getElementById('posting').innerHTML = post;
+		}
+	
+	function highlight(text) {
+		var inputText = document.getElementById("posting");
+		inputText.innerHTML = post;
+  		var innerHTML = post;
+  		var index = innerHTML.indexOf(text);
+  		if (index >= 0) { 
+   			innerHTML = innerHTML.substring(0,index) + "<span class='highlight'>" + innerHTML.substring(index,index+text.length) + "</span>" + innerHTML.substring(index + text.length);
+   			inputText.innerHTML = innerHTML;
+  		}
+	}
+	
+	function show_next_suggestion(){
+		console.log(suggest_count);
+		if (suggest_count >= len) suggest_count = 0;
+		const suggestion = "Your<br>" + sentence_array[suggest_count] + "<br>could be<br>" +
+			  suggestion_array[suggest_count];
+		highlight(sentence_array[suggest_count]);
+		suggest_count = suggest_count + 1;
+		document.getElementById("s2").innerHTML = suggestion;
+		
+		
+	}
+	
+	
+	</script>
+	</head>
+	<body>
+<header>
+    <div class="primary_header">
+      <h1 class="title"> Website Title (Our Product Name) - Main&nbsp;&nbsp;</h1>
+    </div>
+    <nav class="secondary_header" id="menu">
+      <ul>
+        <li><a href="pages/employer.html">Employer</a></li>
+        <li><a href="pages/employee.html">Employee</a></li>
+        <li><a href="pages/aboutUs.html">About Us</a></li>
+		<li><a href="NewIndex.html">Main</a></li>
+      </ul>
+    </nav>
+  </header>
+<br>
+	<div class="text">
+<div>
+  <p id="output"></p>
+  <p>Follow the highlight button to see our suggestions.</p>
+  <br>
+</div>
+<div class="post">
+  <h3 style="text-align: center">Your Posting</h3>
+  <p class="yr" id="posting">sample</p>
+</div>
+	<aside class="suggestion" style="position:relative;left:600px;top:-525px;">
+		<h3 style="position:relative;left:200px;">Suggestions</h3>
+		<p class="suggest-text" id="s2">Click "Show Next" to view your suggestions.</p>
+		</aside>
+		<button onclick="show_next_suggestion()" class="button" style="position:relative;left:900px;top:-500px;">Show Next</button>
+	</div>
+	
+	
+</body>
+</html>
