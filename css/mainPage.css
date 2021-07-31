@@ -6,8 +6,6 @@
 	margin-bottom: auto;
 	margin-left: auto;
 	margin-right: auto;
-	min-margin-left: 0px;
-	min-margin-right: 0px;
 	padding: 0px;
     font-family: 'Times New Roman', serif;
 }
@@ -76,7 +74,15 @@ section {
 	height: 700px;
 }
 .section2{
-	height: 610px;
+	height: 700px;
+}
+
+section h2 {
+	margin-left: 1.5%;
+	color: #3C3D3D;
+	text-transform: uppercase;
+	height: auto;
+	font-size: 200%;
 }
 
 .left_article {
@@ -95,17 +101,6 @@ section {
 	background-color: #DEF2F6;
 }
 
-.container .left_article h2 {
-	padding-left: 5%;
-	padding-right: 5%;
-	margin-top: 5%;
-	margin-bottom: 7%;
-	color: #3C3D3D;
-	font-weight: bold;
-	text-transform: uppercase;
-	height: auto;
-	font-size: 200%;
-}
 .container .left_article h3 {
 	margin-left: 5%;
 	margin-right: 5%;
@@ -159,9 +154,10 @@ section {
 }
 
 .placeholder {
-	margin-top: 10%;
-	width: 100%;
-	height: 100%;
+	margin-top: 3%;
+	margin-left: 10%;
+	width: 80%;
+	height: 80%;
 }
 
 .footer {

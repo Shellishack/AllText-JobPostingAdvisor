@@ -6,8 +6,6 @@
 	margin-bottom: auto;
 	margin-left: auto;
 	margin-right: auto;
-	min-margin-left: 0px;
-	min-margin-right: 0px;
 	padding: 0px;
     font-family: 'Times New Roman', serif;
 }
@@ -73,12 +71,108 @@ section {
 	width: auto;
 }
 .section1{
-	height: 500px;
+	height: 700px;
 }
 .section2{
-	height: 500px;
+	height: 610px;
 }
 
+section h2 {
+	margin-top: 3%;
+	margin-bottom: 5%;
+	color: #3C3D3D;
+	text-transform: uppercase;
+	text-align: center;
+	height: auto;
+	font-size: 200%;
+}
+
+section h3{
+	text-transform: uppercase;
+	height: auto;
+	margin-top: -1px;
+	margin-left: 10px;
+	font-size: 150%;
+	
+}
+
+.template{
+	width: 40%;
+	margin: 3%;
+	padding: 40px;
+	border: 3px solid gray;
+	border-radius: 10px;
+	height: auto;
+	float: left;
+}
+
+form {
+  max-width:600px;
+  padding:10px;
+}
+
+label{
+	font-weight: bold;
+}
+
+textarea {
+	border: 2px solid grey;
+	border-radius: 10px;
+	width: 300px;
+	background-color:rgba(247,242,242,1.00);
+	margin-top: 5px;
+	padding: 15px;
+	
+}
+
+.bigBox{
+	width: 94%;
+	height: 200px;
+}
+
+button {
+	background-color: rgba(4,122,150,1.00); 
+	color: white;
+	border: 0px;
+	border-radius:5px;
+	margin-top: 40px;
+	margin-right: 20px;
+	padding: 20px;
+	font-size: 16px;
+	transition-duration: 0.3s;
+	cursor:pointer;
+}
+
+.buttonLink{
+	text-decoration: none;
+	color: white;
+}
+
+button:hover {
+	background-color:rgba(123,216,250,1.00);		
+}
+
+.document{
+	width: 20%;
+	margin: 3%;
+	padding: 40px;
+	border: 3px solid gray;
+	border-radius: 10px;
+	height: auto;
+	float: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+	
 .left_article {
 	background-color: #FFFFFF;
 	width: 50%;
@@ -96,7 +190,7 @@ section {
 }
 
 .container .left_article h2 {
-	padding-left: 3%;
+	padding-left: 5%;
 	padding-right: 5%;
 	margin-top: 5%;
 	margin-bottom: 7%;
@@ -150,6 +244,20 @@ section {
 	padding-left: 8px;
 }
 
+.right_article {
+	width: 50%;
+	float: left;
+	background-color: #FFFFFF;
+	padding-left: 0px;
+	height: auto;
+}
+
+.placeholder {
+	margin-top: 10%;
+	width: 100%;
+	height: 100%;
+}
+
 .footer {
 	background-color: #717070;
 }
@@ -161,21 +269,6 @@ section {
 	text-align: center;
 	color: #FFFFFF;
 	letter-spacing: 2px;
-}
-
-.placeholder {
-	width: 100%;
-	margin-top: 22PX;
-	margin-right: 0px;
-	margin-bottom: 22PX;
-	margin-left: 0px;
-	padding-top: 0px;
-	padding-right: 0px;
-	padding-bottom: 0px;
-	padding-left: 0px;
-	max-width: 400px;
-	max-height: 200px;
-	height: auto;
 }
 
 .copyright {
@@ -402,6 +495,7 @@ section {
 	cursor: pointer;
 	opacity: 0.5;
 }
+
 
 
 
