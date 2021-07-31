@@ -69,12 +69,7 @@ section {
 	padding: 30px;
 	margin: 0px;
 	width: auto;
-}
-.section1{
-	height: 700px;
-}
-.section2{
-	height: 610px;
+	height: 1500px;
 }
 
 section h2 {
@@ -97,8 +92,8 @@ section h3{
 }
 
 .template{
-	width: 40%;
-	margin: 3%;
+	width: 50%;
+	margin-left: 2.5%;
 	padding: 40px;
 	border: 3px solid gray;
 	border-radius: 10px;
@@ -153,13 +148,18 @@ button:hover {
 }
 
 .document{
-	width: 20%;
-	margin: 3%;
+	width: 27%;
+	margin-right: 2.5%;
 	padding: 40px;
 	border: 3px solid gray;
 	border-radius: 10px;
 	height: auto;
-	float: left;
+	float: right;
+}
+
+input{
+	margin: 10px;
+	
 }
 
 
