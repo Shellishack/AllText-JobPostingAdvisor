@@ -1,15 +1,14 @@
 @charset "UTF-8";
 @import url("cssDevelopmentPage.css");
 .container {
-	background-color: #FFFFFF;
+	background-color: #e8e8e8;
 	width: 1280px;
+	margin-top: 25px;
+	margin-bottom: auto;
 	margin-left: auto;
 	margin-right: auto;
-	border-bottom-width: 0px;
-	padding-left: 0px;
-	padding-top: 25px;
-	padding-right: 0px;
-	padding-bottom: 25px;
+	padding: 0px;
+    font-family: 'Times New Roman', serif;
 }
 .row {
 	width: auto;
@@ -58,7 +57,7 @@
 }
 .primary_header {
 	width: 100%;
-	background-color: #52bad5;
+	background-color: #6677a8;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	clear: left;
@@ -68,7 +67,7 @@
 	width: 100%;
 	padding-top: 50px;
 	padding-bottom: 50px;
-	background-color: #B3B3B3;
+	background-color: #464545;
 	clear: left;
 }
 .container .secondary_header ul {
@@ -100,12 +99,11 @@
 	color: #717070;
 	cursor: pointer;
 }
-section{
-	border: 5px solid gray;
+section {
 	padding: 30px;
 	height: 700px;
 	width: auto;
-	
+	margin: 0px;
 }
 .left_article {
 	background-color: #FFFFFF;
