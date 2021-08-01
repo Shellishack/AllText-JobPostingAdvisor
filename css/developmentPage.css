@@ -69,10 +69,10 @@ section {
 	width: auto;
 }
 .section1{
-	height: 500px;
+	height: 600px;
 }
 .section2{
-	height: 500px;
+	height: 600px;
 }
 
 .left_article {
@@ -141,6 +141,8 @@ section h2 {
 	margin-top: 4.5px;
 	height: auto;
 	padding-left: 8px;
+	line-height: 30px;
+	text-align: left;
 }
 
 .footer {

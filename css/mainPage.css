@@ -67,7 +67,7 @@ section {
 	width: auto;
 }
 .section1{
-	height: 850px;
+	height: 980px;
 }
 .section2{
 	height: 700px;
@@ -140,6 +140,8 @@ section h2 {
 	margin-top: 4.5px;
 	height: auto;
 	padding-left: 8px;
+	line-height: 30px;
+	text-align: left;
 }
 
 .right_article {
