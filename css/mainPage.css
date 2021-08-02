@@ -8,6 +8,7 @@
 	margin-right: auto;
 	padding: 0px;
     font-family: 'Times New Roman', serif;
+	color: #3C3D3D;
 }
 
 .primary_header {
@@ -75,7 +76,6 @@ section {
 
 section h2 {
 	margin-left: 1.5%;
-	color: #3C3D3D;
 	text-transform: uppercase;
 	height: auto;
 	font-size: 200%;
@@ -92,6 +92,7 @@ section h2 {
 	margin: 6%;
 	margin-bottom: 10%;
 	padding: 20px;
+	border: 5px ridge #cfcfcc;
 	border-radius: 10px;
 	background-color: #f2f2f2;
 	font-size: 115%;
@@ -102,7 +103,6 @@ section h2 {
 	margin-left: 5%;
 	margin-right: 5%;
 	margin-top: 5%;
-	color: #3C3D3D;
 	font-weight: bold;
 	text-transform: uppercase;
 	height: auto;

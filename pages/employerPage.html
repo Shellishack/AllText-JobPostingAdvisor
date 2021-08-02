@@ -58,8 +58,19 @@
 	  <aside class="document"> 
 	    <h3>Submitting your document</h3>
 	     <form>
-		   <input type="file" id="myFile" name="filename">
-		   <input type="submit">
+		   <label class="input-file-button" for="myFile">
+		     Upload your document
+		   </label>
+		   <input type="file" id="myFile" name="filename" style="display:none">
+		   <br>
+		   <br>
+		   <br>
+		   <label class="submit-buttom" for="submit-document">
+		     Submit
+		   </label>
+		   <input type="submit" id="submit-document" style="display:none">
+		   <br>
+		   <br>
 		   <div>
 		    <button><a class="buttonLink" href="View Result.html">Proceed</a></button>
           </div>
