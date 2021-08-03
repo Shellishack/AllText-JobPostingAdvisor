@@ -70,7 +70,7 @@ section {
 	margin-left: 100px;
 	margin-right: 100px;
 	width: auto;
-	height: 1000px;
+	height: 1300px;
 }
 
 section h2 {
@@ -83,12 +83,79 @@ section h2 {
 }
 
 section h3{
+	margin-top: 0%;
+	margin-bottom: 0%;
+	text-align: center;
 	text-transform: uppercase;
 	height: auto;
-	margin-top: -1px;
-	margin-left: 10px;
-	font-size: 150%;
+	font-size: 150%;	
+}
+section h4{
+	margin-top: 0%;
+	margin-bottom: 0%;
+	text-align: center;
+	text-transform: none;
+	height: auto;
+	font-size: 130%;	
+}
+
+.post {
+	float: left;
+	width: 50%;
+	margin-left: -3%;
 	
+}
+
+.yr {
+	box-sizing:content-box;
+	border: 5px ridge #cfcfcc;
+	border-radius: 10px;
+	background-color: #f2f2f2;
+	font-size: 115%;
+	word-spacing: 0px;
+	padding: 50px;
+	width: 400px;
+	height: 550px;
+}
+
+.suggestion {
+	float: right;
+	width: 50%;
+	text-align: left;
+	margin-right: -3%;
+}
+
+.suggest-text {
+	box-sizing:content-box;
+	border: 5px ridge #cfcfcc;
+	border-radius: 10px;
+	background-color: #f2f2f2;
+	font-size: 115%;
+	word-spacing: 0px;
+	padding: 50px;
+	width: 400px;
+	height: 550px;
+}
+
+button {
+	background-color: #464545;
+	color: white;
+	border: 0px;
+	border-radius:5px;
+	margin-top: 60px;
+	padding: 20px;
+	font-size: 16px;
+	transition-duration: 0.3s;
+	cursor:pointer;
+}
+
+.button{
+	text-decoration: none;
+	color: white;
+}
+
+.button:hover {
+	background-color: #7e7e7e		
 }
 
 .template{

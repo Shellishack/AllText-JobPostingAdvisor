@@ -6,50 +6,6 @@
   <title>Response Page</title>
   <link href="../css/viewResultPage.css" rel="stylesheet" type="text/css">
   <style>
-			
-		.post {
-			border: thin;
-			border-color: rgba(1,127,245,1.00);
-			width: 40%;
-			line-height:25px;
-			
-			
-		}
-		.yr {
-			box-sizing:content-box;
-			border-radius:25px;
-			width: 400px;
-			height: 600px;
-			padding:30px;
-			border: 3px solid rgba(4,159,206,1.00);
-			
-		}
-		
-		.suggestion {
-			color:black;
-			text-align: left;
-			
-		}
-		.suggest-text {
-			box-sizing:content-box;
-			border-radius:25px;
-			width: 400px;
-			height: 400px;
-			padding:30px;
-			border: 3px solid rgba(4,159,206,1.00);
-			line-height: 25px;
-		}
-		
-		.button {
-			background-color:rgba(4,122,150,1.00); 
-			border:none;color:white; padding:12px 32px; 
-			font-size:16px;
-			transition-duration: 0.3s;
-			cursor:pointer;
-		}
-		.button:hover {
-			background-color:rgba(123,216,250,1.00);		
-		}
 		
 		.highlight {
 			background-color: rgba(180,240,252,1.00);
@@ -221,12 +177,11 @@ external clients
 	    <p class="yr" id="posting">sample</p>
       </div>
 
-	  <aside class="suggestion" style="position:relative;left:600px;top:-525px;">
-		<h3 style="position:relative;left:200px;">Suggestions</h3>
+	  <aside class="suggestion">
+		<h3>Suggestions</h3>
 		<p class="suggest-text" id="s2">Click "Show Next" to view your suggestions.</p>
+		<button onclick="show_next_suggestion()" class="button">Show Next</button>
 	  </aside>
-
-	 <button onclick="show_next_suggestion()" class="button" style="position:relative;left:900px;top:-500px;">Show Next</button>
 	</section>
 
     <footer class="secondary_header footer">
