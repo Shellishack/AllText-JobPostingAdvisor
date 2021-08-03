@@ -381,9 +381,6 @@ button:hover {
 .social .social_icon img {
 	width: 80%;
 }
-.container .secondary_header {
-}
-}
 
 @media (min-width: 321px) and (max-width: 768px) {
 .secondary_header ul li {
