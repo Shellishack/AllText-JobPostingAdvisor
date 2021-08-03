@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <head>
-    <script type="module" src="./main.js" > </script>
-    
-    
+    <script src="processdata.js"></script>
+    <script src="parse_sentence.js"></script>
 </head>
 <body>
-    <!-- <button onclick="parse_sentence('This is test A. This is test B. This is test C.')">Click</button> -->
-    <button onclick="process_stream('This is test A. This is test B. This is test C. Excellent communication skills in both oral and written Armenian and Russian languages.')">test</button>
-    <button onclick="print_sessionstorage()">showstorage</button>
-    <button onclick="shownext('info')">show next</button>
-    <button onclick="showprevious('info')">show previous</button>
+    <p id="special"></p>
 
-    <p id="info"></p>
+    
+    <script>parse_sentence("This is test A. This is test B. This is test C.")</script>
+    
+    <button onclick="process_data('a','This is test A. This is test B. This is test C.')">Click</button>
 </body>

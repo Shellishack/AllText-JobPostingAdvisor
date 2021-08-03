@@ -1,7 +1,7 @@
 function parse_sentence(astr){
-    var sentences=[];
-    var cursentence="";
-    for(var x=0;x<astr.length;++x){
+    sentences=[];
+    cursentence="";
+    for(x=0;x<astr.length;++x){
         if(astr[x]==' ' && cursentence==""){
             continue;
         }
@@ -14,11 +14,6 @@ function parse_sentence(astr){
             cursentence+=astr[x];
         }
     }
-    if(cursentence.length!=0){
-        sentences.push(cursentence);
-    }
-    // console.log(sentences);
+    console.log(sentences);
     return sentences;
 }
-
-export {parse_sentence};
