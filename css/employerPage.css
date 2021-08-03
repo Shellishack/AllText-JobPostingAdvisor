@@ -79,40 +79,102 @@ section {
 	height: 610px;
 }
 
-section h2{
-	margin-bottom: 60px;
-	margin-left: 30px;
+section h2 {
+	margin-top: 3%;
+	margin-bottom: 5%;
+	color: #3C3D3D;
 	text-transform: uppercase;
+	text-align: center;
 	height: auto;
 	font-size: 200%;
 }
+
 section h3{
 	text-transform: uppercase;
 	height: auto;
+	margin-top: -1px;
 	margin-left: 10px;
-	font-size: 125%
+	font-size: 150%;
 	
 }
 
 .template{
-	width: 50%;
-	margin: 30px;
-	padding:30px;
+	width: 40%;
+	margin: 3%;
+	padding: 40px;
 	border: 3px solid gray;
 	border-radius: 10px;
 	height: auto;
+	float: left;
+}
+
+form {
+  max-width:600px;
+  padding:10px;
 }
 
 label{
 	font-weight: bold;
 }
 
-textarea{
+textarea {
+	border: 2px solid grey;
+	border-radius: 10px;
+	width: 300px;
+	background-color:rgba(247,242,242,1.00);
 	margin-top: 5px;
-	width: 560px;
+	padding: 15px;
+	
+}
+
+.bigBox{
+	width: 94%;
 	height: 200px;
 }
 
+button {
+	background-color: rgba(4,122,150,1.00); 
+	color: white;
+	border: 0px;
+	border-radius:5px;
+	margin-top: 40px;
+	margin-right: 20px;
+	padding: 20px;
+	font-size: 16px;
+	transition-duration: 0.3s;
+	cursor:pointer;
+}
+
+.buttonLink{
+	text-decoration: none;
+	color: white;
+}
+
+button:hover {
+	background-color:rgba(123,216,250,1.00);		
+}
+
+.document{
+	width: 20%;
+	margin: 3%;
+	padding: 40px;
+	border: 3px solid gray;
+	border-radius: 10px;
+	height: auto;
+	float: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+	
 .left_article {
 	background-color: #FFFFFF;
 	width: 50%;
@@ -436,50 +498,8 @@ textarea{
 	opacity: 0.5;
 }
 
-.text {
-		border-top: 5px solid grey;
-		border-left: 5px solid grey;
-		border-right: 5px solid grey;
-		height:1200px;		
-}
 
-aside.ds {
-	background-color:rgba(227,221,222,1.00);
-		border: 3px black solid;
-		border-color: rgba(86,86,86,1.00);	
-}
 
-.button {
-	background-color:rgba(4,122,150,1.00); 
-	border:none;color:white; padding:12px 32px; 
-	font-size:16px;
-	transition-duration: 0.3s;
-	position:relative;
-	left:30px;
-	cursor:pointer;
-	border-radius:5px;
-}
-.button:hover {
-	background-color:rgba(123,216,250,1.00);		
-}
-.next {
-	text-decoration: none;
-	color:white;
-	target:_blank;
-}
-form {
-  max-width:600px;
-  padding:10px;
-}
-textarea {
-  border: 2px solid grey;
-  border-radius: 10px;
-  background-color:rgba(227,221,222,1.00);
-  resize:none;
-  width: 300px;
-  padding:10px;
-}
-textarea:focus {
-  background-color:rgba(247,242,242,1.00);
-}
+
+
 
