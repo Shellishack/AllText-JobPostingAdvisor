@@ -7,13 +7,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Employer</title>
   <link href="../css/employerPage.css" rel="stylesheet" type="text/css">
-  <script src="processdata.js">
-	function process_data_front() {
-	const companyname = document.getElementbyId("companyname").value;
-	const jobrequirement = document.getElementById("jobrequirement").value;
-	process_data(companyname, jobrequirement);
-	}
-  </script> 
+  <script type="module" src="../scripts/main.js"></script>
+	<script> 
+		async function loadjobreq(astr) {
+			// create loading gif
+			var parentdiv=document.getElementById('proceed_div');
+			var loadinggif=document.createElement("iframe");
+			loadinggif.setAttribute('src','https://giphy.com/embed/KG4PMQ0jyimywxNt8i');
+			loadinggif.setAttribute('frameBorder','0');
+			loadinggif.setAttribute('width','60');
+			loadinggif.setAttribute('height','60');
+			loadinggif.style.float='left';
+			loadinggif.style.marginLeft='30px';
+			loadinggif.style.marginTop='-10px';
+			// <iframe src="https://giphy.com/embed/KG4PMQ0jyimywxNt8i" width="60" height="60" frameBorder="0" style="float: left; margin-left: 30px;margin-top: -10px;"></iframe>
+			parentdiv.insertBefore(loadinggif,loadinggif.lastChild);
+
+			// process data
+			await process_stream(astr);
+			window.location="View Result.html";
+		}
+
+	</script>
 </head>
 	
 <body>
