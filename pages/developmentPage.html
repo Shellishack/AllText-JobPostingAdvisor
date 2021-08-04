@@ -1,18 +1,18 @@
 <!doctype html>
 <html>
-	
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Development</title>
- 
-<link href="../css/developmentPage.css" rel="stylesheet" type="text/css">
+
+  <link href="../css/developmentPage.css" rel="stylesheet" type="text/css">
 </head>
-	
+
 <body>
   <div class="container">
-	  
+
     <header>
       <div class="primary_header">
         <h1 class="title"> Website Title (Our Product Name) - Development&nbsp;&nbsp;</h1>
@@ -21,63 +21,113 @@
         <ul>
           <li><a href="employerPage.html">Employer</a></li>
           <li><a href="employeePage.html">Employee</a></li>
-		  <li><a href="developmentPage.html">Development</a></li>
+          <li><a href="developmentPage.html">Development</a></li>
           <li><a href="aboutUsPage.html">About Us</a></li>
-		  <li><a href="../index.html">Main</a></li>
+          <li><a href="../index.html">Main</a></li>
         </ul>
       </nav>
     </header>
-	
+
     <section class="section1">
       <h2>About front-end design</h2>
-      <div class="left_article">	
+      <div class="left_article">
         <div class="inner_border">
           <h3>Timeline of development </h3>
           <ol>
-            <li>Researching and self-teaching relevant front-end programming languages like HTML, CSS, and JavaScript.</li>
+            <li>Researching and self-teaching relevant front-end programming languages like HTML, CSS, and JavaScript.
+            </li>
             <li>Discussion with the back-end design team to define all the UI components for the website.</li>
             <li>Organization of UI components in a logical manner.</li>
             <li>Designing and testing a website.</li>
             <li>Publication of final product.</li>
-          </ol> 
+          </ol>
         </div>
       </div>
-      <aside class="left_article"> 
+      <aside class="left_article">
         <div class="inner_border">
           <h3>Demonstration of Growth mindset&nbsp;</h3>
           <ul>
-            <li>An astonishing side of our front-end design is that the designated team members had zero experience in front-end web development. They are entry-level programmers who had insufficient knowledge in front-end programming languages. However, with a growth mindset and self-teaching skills, they have designed satisfactory web pages in only about four weeks. Furthermore, they have gained sufficient knowledge in several programming languages such as HTML, CSS, and JavaScript. Such accomplishments demonstrate the successful application of a growth mindset.</li>
-            </ul>
-        </div>  
+            <li>An astonishing side of our front-end design is that the designated team members had zero experience in
+              front-end web development. They are entry-level programmers who had insufficient knowledge in front-end
+              programming languages. However, with a growth mindset and self-teaching skills, they have designed
+              satisfactory web pages in only about four weeks. Furthermore, they have gained sufficient knowledge in
+              several programming languages such as HTML, CSS, and JavaScript. Such accomplishments demonstrate the
+              successful application of a growth mindset.</li>
+          </ul>
+        </div>
       </aside>
     </section>
-	  
+
     <section class="section2">
       <h2>About back-end design</h2>
-      <div class="left_article">	
+      <div class="left_article">
         <div class="inner_border">
-          <h3>Your heading</h3>
+          <h3>Timeline of development</h3>
+          <ol>
+            <li>Confirming website functionalities and researcing AI and Cloud technologies</li>
             <ul>
-              <li>Your content</li>
-            </ul> 
+              <li>We decided to have employers as our major audience. Hence, we focused on making the job post advisor
+                powered by a text classification ML model.</li>
+              <li>Additionally, we created a chatbot that answers questions about our solution and biases against
+                workers at workplaces.</li>
+            </ul>
+            <li>Preparing training data for traning ML.</li>
+            <ul>
+              <li>We decided
+                to train ML models using datasets labelled by ourselves.</li>
+              <li>We automated labelling processing using Pandas.</li>
+            </ul>
+            <li>Training ML models and deploying endpoints.</li>
+            <ul>
+              <li>We used Automated ML on Azure Machine Learning Studio to help us train the best performing models.
+              </li>
+              <li>We deployed endpoints through Azure Machine Learning Studio.</li>
+            </ul>
+            <li>Hosting sites on Azure App Service using Docker images.</li>
+            <ul>
+              <li>We hosted two servers. One is for the frontend that has a static web environment. The other one is for
+                the backend that runs a Python HTTP server.</li>
+            </ul>
+            <li>Linking the frontend and backend.</li>
+            <ul>
+              <li>We created customized endpoints on the backend server.</li>
+              <li>We wrote JS functions that access backend endpoints via REST API.</li>
+            </ul>
+          </ol>
         </div>
       </div>
-      <aside class="left_article">  
+      <aside class="left_article">
         <div class="inner_border">
-          <h3>Your heading</h3>
+          <h3>Demonstration of Growth mindset</h3>
           <ul>
             <li>Your content</li>
           </ul>
-        </div>  
+        </div>
+      </aside>
+      <aside class="left_article" style="width: 100%;">
+        <div class="inner_border" style="margin: 3%; margin-top: 0%;">
+          <h3 style="margin: 2.5%;">Challenges and solutions</h3>
+          <h4 style="margin-left: 2.5%; margin-bottom: 0%;">AI</h4>
+          <p style="margin: 2.5%;margin-bottom: 0%;margin-top: 1%;">
+            Since we couldn't find any pre-trained model or labelled datasets for our ML application, we had to process raw data and train ML models on our own.
+          </p>
+          <ul style="margin: 2.5%; margin-top: 0%;">
+            <li>First, to automate the labelling process, we manually labelled around one thousand job requirements, and we extracted keywords that may introduce biases against disabled workers at workplaces.</li>
+            <li>Second, the automation program written by Ellis labelled 300,000 entries in two raw datasets by matching extracted keywords. Then these labelled entries are randomly divided into training set and validation set.</li>
+          </ul>
+          <h4 style="margin-left: 2.5%; margin-bottom: 0%;">Backend server</h4>
+          <ul style="margin: 2.5%; margin-top: 0%;">
+            <li>Your content</li>
+          </ul>
+        </div>
       </aside>
     </section>
-	
+
     <footer class="secondary_header footer">
       <div class="copyright">&copy;2021 -&nbsp;Website Title (Our Product Name) <strong>&nbsp;</strong></div>
     </footer>
 
   </div>
 </body>
-	
-</html>
 
+</html>
