@@ -2,7 +2,7 @@ import pandas
 import random
 
 targetnum=200
-disabilitytypes=['developmental','intellectual','mental','physical','sensory']
+disabilitytypes=['intellectual','mental','physical','sensory']
 
 def get_nulldisabilitytypes_bitmap():
     type_bitmap_str=""

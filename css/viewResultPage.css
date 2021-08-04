@@ -115,7 +115,7 @@ section h4{
 	word-spacing: 0px;
 	padding: 50px;
 	width: 400px;
-	height: 550px;
+	/* height: 550px; */
 }
 
 .suggestion {
@@ -134,7 +134,7 @@ section h4{
 	word-spacing: 0px;
 	padding: 50px;
 	width: 400px;
-	height: 550px;
+	/* height: 550px; */
 }
 
 button {

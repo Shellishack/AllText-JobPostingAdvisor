@@ -20,20 +20,7 @@ async function process_stream(jobreq){
 
     for (var x=0; x<sentencelist.length; ++x){
         var temp={'sentence':sentencelist[x]};
-        // getgroup(sentencelist[x])
-        //     .then(response=>response.json())
-        //     .then(result=>{
-        //         temp['group']=JSON.parse(result)["result"];
-        //         // console.log(result)
-        //         // console.log(JSON.parse(result).result);
-        //     });
-        // getbias(sentencelist[x])
-        //     .then(response=>response.json())
-        //     .then(result=>{
-        //         temp['bias']=JSON.parse(result)["result"];
-        //         // console.log(result)
-        //         // console.log(JSON.parse(result).result);
-        //     });
+
         let response_group=await getgroup(sentencelist[x]);
         let group=await response_group.json();
         group=JSON.parse(group)['result'];
@@ -46,19 +33,27 @@ async function process_stream(jobreq){
         output.data.push(temp);
     }
     
-    // 3. Put result into storage
+    // 3. Put sentences labelled biased into storage along with its group
     sessionStorage.setItem("ptr",-1);
-    sessionStorage.setItem("len",output.data.length);
+    
+    sessionStorage.setItem("fulltext",jobreq);
+    var nbiased=0;
     for(var x=0;x<output.data.length;++x){
-        // Treat storage as a queue
-        sessionStorage.setItem("sentence"+x.toString()+"_sentence",output.data[x].sentence);
-        sessionStorage.setItem("sentence"+x.toString()+"_bias",output.data[x].bias);
-        sessionStorage.setItem("sentence"+x.toString()+"_group",output.data[x].group);
-        // console.log("sentence"+x.toString()+"_sentence");
-        // console.log(output.data[x].sentence);
-        // console.log(output.data[x].bias);
-        // console.log(output.data[x].group);
+        // console.log(typeof(output.data[x].bias[0]));
+        // console.log(output.data[x].bias[0]);
+        if(output.data[x].bias=='2'){
+            console.log(x,"biased");
+            // Treat storage as a dictionary
+            sessionStorage.setItem("sentence"+nbiased.toString()+"_sentence",output.data[x].sentence);
+            sessionStorage.setItem("sentence"+nbiased.toString()+"_group",output.data[x].group);
+            nbiased+=1;
+            // console.log("sentence"+x.toString()+"_sentence");
+            // console.log(output.data[x].sentence);
+            // console.log(output.data[x].bias);
+            // console.log(output.data[x].group);
+        }
     }
+    sessionStorage.setItem("len",nbiased);
     console.log(output);
     return output;
     

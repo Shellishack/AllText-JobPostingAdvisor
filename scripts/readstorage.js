@@ -3,7 +3,6 @@ function print_sessionstorage(){
     
     for(var x=0;x<len;++x){
         console.log(sessionStorage.getItem("sentence"+x.toString()+"_sentence"));
-        console.log(sessionStorage.getItem("sentence"+x.toString()+"_bias"));
         console.log(sessionStorage.getItem("sentence"+x.toString()+"_group"));
 
     }
@@ -12,48 +11,79 @@ function print_sessionstorage(){
 
 function shownext(id){
     /* Pass the DOM id to show result in that DOM
+       Return a ptr that indicates index of the item
     */
     var ptr=parseInt(sessionStorage.getItem("ptr"))+1;
     var len=sessionStorage.getItem("len");
 
     if(ptr<len){
-        var text=sessionStorage.getItem("sentence"+ptr.toString()+"_sentence")+'\n'+
-                 sessionStorage.getItem("sentence"+ptr.toString()+"_bias")+'\n'+
-                 sessionStorage.getItem("sentence"+ptr.toString()+"_group");
+        var sentence=sessionStorage.getItem("sentence"+ptr.toString()+"_sentence");
+        var group=sessionStorage.getItem("sentence"+ptr.toString()+"_group");
+        
+
+        // if biased, synthesize output
+        var text=sentence+'\n';
+        if(group[0]=='1'){
+            text+='<br><br>This sentence might contain bias against workers with <b>intellectual</b> disabilities.';
+        }
+        if(group[1]=='1'){
+            text+='<br><br>This sentence might contain bias against workers with <b>mental</b> disabilities.';
+        }
+        if(group[2]=='1'){
+            text+='<br><br>This sentence might contain bias against workers with <b>physical</b> disabilities.';
+        }
+        if(group[3]=='1'){
+            text+='<br><br>This sentence might contain bias against workers with <b>sensory</b> disabilities.';
+        }
+
         document.getElementById(id).innerHTML=text;
         console.log("ptr is",ptr);
         sessionStorage.setItem("ptr",ptr);
     }
-    else if(ptr==len){
-        document.getElementById(id).innerHTML="You have reached end of file";
-        sessionStorage.setItem("ptr",ptr);
-    }
+    // otherwise, do nothing.
     else{
-        document.getElementById(id).innerHTML="You have reached end of file";
+        return ptr-1;
     }
-    return;
+    
+    return ptr;
 }
 
 function showprevious(id){
+    /* Pass the DOM id to show result in that DOM
+       Return a ptr that indicates index of the item
+    */
     var ptr=parseInt(sessionStorage.getItem("ptr"))-1;
     var len=sessionStorage.getItem("len");
 
     if(ptr>-1){
-        var text=sessionStorage.getItem("sentence"+ptr.toString()+"_sentence")+'\n'+
-                 sessionStorage.getItem("sentence"+ptr.toString()+"_bias")+'\n'+
-                 sessionStorage.getItem("sentence"+ptr.toString()+"_group");
+        var sentence=sessionStorage.getItem("sentence"+ptr.toString()+"_sentence");
+        var group=sessionStorage.getItem("sentence"+ptr.toString()+"_group");
+        
+
+        // if biased, synthesize output
+        var text=sentence+'\n';
+        if(group[0]=='1'){
+            text+='<br><br>This sentence might contain bias against workers with <b>intellectual</b> disabilities.';
+        }
+        if(group[1]=='1'){
+            text+='<br><br>This sentence might contain bias against workers with <b>mental</b> disabilities.';
+        }
+        if(group[2]=='1'){
+            text+='<br><br>This sentence might contain bias against workers with <b>physical</b> disabilities.';
+        }
+        if(group[3]=='1'){
+            text+='<br><br>This sentence might contain bias against workers with <b>sensory</b> disabilities.';
+        }
+
         document.getElementById(id).innerHTML=text;
         console.log("ptr is",ptr);
         sessionStorage.setItem("ptr",ptr);
     }
-    else if(ptr==-1){
-        document.getElementById(id).innerHTML="You have reached start of file";
-        sessionStorage.setItem("ptr",ptr);
-    }
+    // otherwise, do nothing
     else{
-        document.getElementById(id).innerHTML="You have reached start of file";
+        return ptr+1;
     }
-    return;
+    return ptr;
 }
 
 export {print_sessionstorage, shownext, showprevious}
