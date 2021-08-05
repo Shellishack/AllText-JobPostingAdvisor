@@ -71,7 +71,7 @@
               <li>Additionally, we created a chatbot that answers questions about our solution and biases against
                 workers at workplaces.</li>
             </ul>
-            <li>Preparing training data for traning ML.</li>
+            <li>Preparing training data for training ML.</li>
             <ul>
               <li>We decided
                 to train ML models using datasets labelled by ourselves.</li>
@@ -109,16 +109,48 @@
           <h3 style="margin: 2.5%;">Challenges and solutions</h3>
           <h4 style="margin-left: 2.5%; margin-bottom: 0%;">AI</h4>
           <p style="margin: 2.5%;margin-bottom: 0%;margin-top: 1%;">
-            Since we couldn't find any pre-trained model or labelled datasets for our ML application, we had to process raw data and train ML models on our own.
+            <b>Challenge:</b> Since we couldn't find any pre-trained model or labelled datasets for our ML application,
+            we had to process raw data and train ML models on our own. While we wished to have high quality labelled
+            training and validation sets, it was unrealistic for us to label enough data by hands in such a short time
+            period. Hence, we needed to
+            find a way to automate the labelling process although such an automation might trade off quality of data for
+            efficiency.
+            <br><br><b>Solution:</b>
+            <br> First, we manually labelled around one thousand job
+            requirements, and we extracted keywords that might introduce biases against disabled workers at workplaces.
+            <br><br> Second, the automation program written by Ellis labelled 300,000 entries in two raw datasets by
+            matching
+            extracted keywords. These laballed entries were further processed to make sure that they are balanced. Then
+            processed entries are randomly divided to training set and validation set.
+            <br><br>Lastly, we fed training data to Azure AutoML. After AutoML finished training, we deployed models
+            that performed well. We then fed additional validation data to test our models. We found that our two models
+            had % and % accuracy respectively.
           </p>
-          <ul style="margin: 2.5%; margin-top: 0%;">
-            <li>First, to automate the labelling process, we manually labelled around one thousand job requirements, and we extracted keywords that may introduce biases against disabled workers at workplaces.</li>
-            <li>Second, the automation program written by Ellis labelled 300,000 entries in two raw datasets by matching extracted keywords. Then these labelled entries are randomly divided into training set and validation set.</li>
-          </ul>
+
           <h4 style="margin-left: 2.5%; margin-bottom: 0%;">Backend server</h4>
-          <ul style="margin: 2.5%; margin-top: 0%;">
-            <li>Your content</li>
-          </ul>
+          <p style="margin: 2.5%;margin-bottom: 0%;margin-top: 1%;">
+            <b>Challenge:</b> We wanted to fetch results from ML model endpoints. However, the endpoints deployed
+            automatically by Azure ML Studio did not accept CORS requests from a browser.
+            After doing some research, we found that we could not customize the CORS setting on the automatically
+            deployed endpoints.
+            <br><br><b>Solution:</b>
+            <br>There were immediately two possible solutions after we spotted the problem caused by AutoML endpoints'
+            unchangable settings. We could either transform our static website to a dynamic website and have an Express
+            server running, or we
+            could set up a separate backend server that would handle function calls from the frontend and send requests to
+            the Internet.
+            <br><br>We decided to use the latter solution. The considerations were that, first, our frontend dev team
+            were fairly new to web design and swithcing html based static website to node.js based dynamic website could
+            add extra workload for them; and, second, we could save some time by using the consume sample codes given by
+            Azure ML endpoints. This solution also solved the original problem because it sent requests to AutoML
+            endpoints without using a browser, and we could configure CORS settings between frontend container and
+            backend container. The backend server would accept requests from the frontend, and then fetch results from
+            endpoints, and finally sent results back to the frontend.
+            <br><br>When choosing an environment for the backend server, we decided to use Python HTTP server because
+            sample Python codes were given. In addition, it would make more sense if we used only one language in each
+            Docker image. Hence, we hosted the backend server on a separated container.
+
+          </p>
         </div>
       </aside>
     </section>
