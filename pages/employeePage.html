@@ -27,7 +27,7 @@
 			right: 100px;
       bottom: 20px;
 			border-radius: 10px;
-      height: 100px;
+      height: 40px;
 
 			
 			
@@ -73,7 +73,7 @@
         </style>  
         <script>
 
-          const total_q = 2;       // tbd;
+          const total_q = 3;       // tbd;
           var current_q = 1;
           function shownextquestion() {
             console.log(current_q);
@@ -156,14 +156,15 @@
         <!-- functions: enter conditions: via multiple choice or textbox 
         match employee with a job they are capable of -->
 
-        <div style="margin-left: 100px;">
+        <div style="margin-left: 100px;" class="main">
         <h1>Complete your personal status to find a matching job in our job posting database</h1>
         <h4>Please use our chatbot if you have any question regarding certain terminologies</h4>
-      </div>
+        <br><br>
+
         <section class="choice" style="position:relative; left:100px;"> 
           <form>
-          <div id="q1" style="display:inline; position:relative;"">
-          <p>I identify myself as:<br>
+          <div id="q1" style="display:inline; position:relative;">
+          <p>I identify myself with:<br>
             <input type="radio" name="disable_type" value="dev_im">mental disability<br>
             <input type="radio" name="disable_type" value="dev_im">physical disability<br>
             <input type="radio" name="disable_type" value="dev_im">sensory disability<br>
@@ -179,17 +180,26 @@
           Please specify what accommodation you need:<br>
           <textarea id="accommodation"></textarea>
         </div>
-
         </p></div>
+
+        <div id="q3" style="display:none; position:relative">
+        <p> Please provide us your contact information so we can let employers know about you. (optional)<br><br>
+          Your name:<br>
+          <textarea class="small"></textarea><br>
+          Your email address:<br>
+          <textarea class="small"></textarea><br>
+        </p></div>
+
       </form>
     </section>
-        <div style="position:relative; left:-600px; top:60px;">
-          <button onclick="showpreviousquestion()" id="prevbutton" class="navbutton" style="left:-30px;">Last Question</button>
+        <div style="position:relative; left:-500px; top:120px;">
+          <button onclick="showpreviousquestion()" id="prevbutton" class="navbutton" style="left:-70px;">Last Question</button>
           <button onclick="shownextquestion()" id="nextbutton" class="navbutton">Next Question</button>
           <button id="finalbutton" class="navbutton" style="display:none; position:relative; left:50px;">
             <a href=employeeresult.html class="buttonlink" style="text-decoration: none; color:white">Proceed</a></button>
         </div>
 
+      </div>
         
       <button class="open-button" onclick="openchatbot()">Use Our Chatbot</button>
       <div class="chat-popup" id="mychatbot">
@@ -198,11 +208,12 @@
       <button type="button" class="cancel" onclick="closechatbot()">Close</button>
       </div>
 
+      </div>
+
       <footer class="secondary_header footer">
         <div class="copyright">&copy;2021 -&nbsp;Website Title (Our Product Name) <strong>&nbsp;</strong></div>
       </footer>	
 
-      </div>
       </body>
 
 </html>

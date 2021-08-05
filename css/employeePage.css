@@ -9,6 +9,7 @@
   padding: 0px;
   font-family: "Times New Roman", serif;
   color: #3c3d3d;
+  height: 1300px;
 }
 
 .primary_header {
@@ -188,6 +189,10 @@ button:hover {
 
 .footer {
   background-color: #717070;
+  width: 1280px;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .title {
@@ -489,5 +494,13 @@ button:hover {
   a .navbutton {
     text-decoration: none;
     color: white;
+  }
+
+  main {
+    height: 900px;
+  }
+
+  small {
+    margin-top: none;
   }
 }
