@@ -1,6 +1,209 @@
 <!DOCTYPE html>
 <html>
-    <body>
-    This is a page for customers.&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-    </body>
+	
+    <head>
+	
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Employer</title>
+        <link href="../css/employeePage.css" rel="stylesheet" type="text/css">
+        <style>
+
+        .navbutton {
+            position: relative;
+            top: 390px;
+            left: 0px;
+          }
+
+
+          .open-button {
+			background-color:rgba(241,158,11,1.00); 
+			border:none;color:white; padding:12px 12px; 
+			font-size:16px;
+			transition-duration: 0.3s;
+			cursor:pointer;
+			position: fixed;
+			right: 100px;
+      bottom: 20px;
+			border-radius: 10px;
+      height: 100px;
+
+			
+			
+		}
+		
+		.open-button:hover {
+			background-color:rgba(168,154,1,1.00);		
+		}
+		
+		.chat-popup {
+			display: none;
+			position: fixed;
+			bottom: 20px;
+			right: 330px;
+			height: 640px;
+			width: 400px;
+			border: 3px solid #f1f1f1;
+			border-radius: 15px;
+			z-index: 9;
+			background-color:aliceblue;
+		}
+		
+		.cancel {
+			background-color:rgba(193,5,8,1.00); 
+			border:none; color:white; padding:12px 32px; 
+			font-size:16px;
+			border-radius:10px;
+			transition-duration: 0.3s;
+			cursor:pointer;
+			margin-left:50px;
+			margin-top:8px;
+			width: 300px;
+		}
+		
+		.cancel:hover {
+			background-color:indianred;
+		}
+		
+		.chatbot_header {
+			text-align: center;
+		}
+
+        </style>  
+        <script>
+
+          const total_q = 2;       // tbd;
+          var current_q = 1;
+          function shownextquestion() {
+            console.log(current_q);
+            if (current_q == total_q) {
+              showfinalbutton();
+            } else {
+            id = "q" + current_q;
+            document.getElementById(id).style.display = "none";
+            current_q += 1;
+            next_id = "q" + current_q;
+            document.getElementById(next_id).style.display = "inline";
+            document.getElementById("prevbutton").style.backgroundColor = "#464545";
+            console.log("happy");
+            
+            }
+          }
+
+          function showpreviousquestion() {
+            if (current_q == 1) return;
+            id = "q" + current_q;
+            document.getElementById(id).style.display = "none";
+            current_q -= 1;
+            prev_id = "q" + current_q;
+            document.getElementById(prev_id).style.display = "inline";
+            if (current_q == 1) {
+              document.getElementById("prevbutton").style.backgroundColor = "gray";
+            }
+          }
+
+          function showfinalbutton() {
+            document.getElementById("finalbutton").style.display = "inline";
+          }
+
+          
+	var xhr = new XMLHttpRequest();
+    xhr.open('GET', "https://webchat.botframework.com/api/tokens", true);
+    xhr.setRequestHeader('Authorization', 'BotConnector ' + 'YOUR SECRET HERE');
+    xhr.send();
+    xhr.onreadystatechange = processRequest;
+
+    function processRequest(e) {
+      if (xhr.readyState == 4  && xhr.status == 200) {
+        var response = JSON.parse(xhr.responseText);
+        document.getElementById("chat").src="https://webchat.botframework.com/embed/<botname>?t="+response
+      }
+    }
+	
+	
+	function openchatbot() {
+		document.getElementById("mychatbot").style.display = "block";
+	}
+	
+	function closechatbot() {
+		document.getElementById("mychatbot").style.display = "none";
+	}
+	
+        </script>
+      </head>
+          
+      <body>
+          
+        <div class="container"> 
+            
+          <header>
+            <div class="primary_header">
+              <h1 class="title"> AllText -&nbsp; Employee&nbsp;&nbsp;</h1>
+            </div>
+          <nav class="secondary_header" id="menu">
+            <ul>
+              <li><a href="employerPage.html">Employer</a></li>
+              <li><a href="employeePage.html">Employee</a></li>
+              <li><a href="developmentPage.html">Development</a></li>
+              <li><a href="aboutUsPage.html">About Us</a></li>
+              <li><a href="../NewIndex.html">Main</a></li>
+            </ul>
+          </nav>
+        </header>
+
+
+        <!-- functions: enter conditions: via multiple choice or textbox 
+        match employee with a job they are capable of -->
+
+        <div style="margin-left: 100px;">
+        <h1>Complete your personal status to find a matching job in our job posting database</h1>
+        <h4>Please use our chatbot if you have any question regarding certain terminologies</h4>
+      </div>
+        <section class="choice" style="position:relative; left:100px;"> 
+          <form>
+          <div id="q1" style="display:inline; position:relative;"">
+          <p>I identify myself as:<br>
+            <input type="radio" name="disable_type" value="dev_im">mental disability<br>
+            <input type="radio" name="disable_type" value="dev_im">physical disability<br>
+            <input type="radio" name="disable_type" value="dev_im">sensory disability<br>
+            <input type="radio" name="disable_type" value="dev_im">Others<br>
+            &nbsp;&nbsp;<textarea></textarea>
+          </p>
+        </div>
+        <div id="q2" style="display:none; position:relative; ">
+        <p>Do I need to request an accommodation?<br>
+          <input type="radio" name="disable_type" value="dev_im" onclick="displayspecification()">yes<br>
+          <input type="radio" name="disable_type" value="dev_im">no<br>
+          <div>
+          Please specify what accommodation you need:<br>
+          <textarea id="accommodation"></textarea>
+        </div>
+
+        </p></div>
+      </form>
+    </section>
+        <div style="position:relative; left:-600px; top:60px;">
+          <button onclick="showpreviousquestion()" id="prevbutton" class="navbutton" style="left:-30px;">Last Question</button>
+          <button onclick="shownextquestion()" id="nextbutton" class="navbutton">Next Question</button>
+          <button id="finalbutton" class="navbutton" style="display:none; position:relative; left:50px;">
+            <a href=employeeresult.html class="buttonlink" style="text-decoration: none; color:white">Proceed</a></button>
+        </div>
+
+        
+      <button class="open-button" onclick="openchatbot()">Use Our Chatbot</button>
+      <div class="chat-popup" id="mychatbot">
+      <h1 class="chatbot_header">Chatbot</h1>
+      <iframe src='https://webchat.botframework.com/embed/WEA-AI-WebBot-1?s=7VAatpKc7RY.HlsdICc1gyBoXZOrTRKPL0Hik3Z_MOCcvt4eWsNPObk'  style='min-width: 400px; width: 40%; min-height: 500px;'></iframe>
+      <button type="button" class="cancel" onclick="closechatbot()">Close</button>
+      </div>
+
+      <footer class="secondary_header footer">
+        <div class="copyright">&copy;2021 -&nbsp;Website Title (Our Product Name) <strong>&nbsp;</strong></div>
+      </footer>	
+
+      </div>
+      </body>
+
 </html>
+
