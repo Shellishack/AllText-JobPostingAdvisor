@@ -18,7 +18,7 @@ async function getgroup(jobreq) {
     headers: myHeaders
   };
   
-  let response= await fetch("https://jobpostinghandleserver.azurewebsites.net/getgroup", requestOptions);
+  let response= await fetch("https://jobpostingbackendserver-test2.azurewebsites.net/getgroup", requestOptions);
   return response;
 }
 
@@ -41,7 +41,7 @@ async function getbias(jobreq) {
     body: raw,
     headers: myHeaders
   };
-  let response=await fetch("https://jobpostinghandleserver.azurewebsites.net/getbias", requestOptions);
+  let response=await fetch("https://jobpostingbackendserver-test2.azurewebsites.net/getbias", requestOptions);
   return response;
 }
 
