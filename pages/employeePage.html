@@ -129,6 +129,13 @@
 	function closechatbot() {
 		document.getElementById("mychatbot").style.display = "none";
 	}
+
+
+  type_selction = []; 
+
+  function dis_type() {
+    console.log(this.parent.value);
+  }
 	
         </script>
       </head>
@@ -165,17 +172,17 @@
           <form>
           <div id="q1" style="display:inline; position:relative;">
           <p>I identify myself with:<br>
-            <input type="radio" name="disable_type" value="dev_im">mental disability<br>
-            <input type="radio" name="disable_type" value="dev_im">physical disability<br>
-            <input type="radio" name="disable_type" value="dev_im">sensory disability<br>
-            <input type="radio" name="disable_type" value="dev_im">Others<br>
-            &nbsp;&nbsp;<textarea></textarea>
+            <input type="checkbox" id="disable_type" value="dev_im" onclick="dis_type()">mental disability<br>
+            <input type="checkbox" id="disable_type" value="phy_im" onclick="dis_type()">physical disability<br>
+            <input type="checkbox" id="disable_type" value="sen_im" onclick="dis_type()">sensory disability<br>
+            <input type="checkbox" id="disable_type" value="other_im" onclick="dis_type()">Others<br>
+            &nbsp;&nbsp;<textarea id="other_im_spe"></textarea>
           </p>
         </div>
         <div id="q2" style="display:none; position:relative; ">
         <p>Do I need to request an accommodation?<br>
-          <input type="radio" name="disable_type" value="dev_im" onclick="displayspecification()">yes<br>
-          <input type="radio" name="disable_type" value="dev_im">no<br>
+          <input type="radio" name="acc" value="acc_yes">yes<br>
+          <input type="radio" name="acc" value="acc_no">no<br>
           <div>
           Please specify what accommodation you need:<br>
           <textarea id="accommodation"></textarea>
@@ -185,9 +192,9 @@
         <div id="q3" style="display:none; position:relative">
         <p> Please provide us your contact information so we can let employers know about you. (optional)<br><br>
           Your name:<br>
-          <textarea class="small"></textarea><br>
+          <textarea class="small" id="contact_name"></textarea><br>
           Your email address:<br>
-          <textarea class="small"></textarea><br>
+          <textarea class="small" id="contact_email"></textarea><br>
         </p></div>
 
       </form>
