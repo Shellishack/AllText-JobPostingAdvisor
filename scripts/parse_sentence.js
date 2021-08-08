@@ -2,11 +2,16 @@ function parse_sentence(astr){
     var sentences=[];
     var cursentence="";
     for(var x=0;x<astr.length;++x){
-        if(astr[x]==' ' && cursentence==""){
+        if(cursentence=="" && (astr[x]==' ' || astr[x]=='\n')){
             continue;
         }
-        else if(astr[x]=='.' || astr[x]==';'){
+        else if(cursentence!="" && astr[x]=='.'){
             cursentence+=astr[x];
+            sentences.push(cursentence);
+            cursentence="";
+        }
+        else if(cursentence!="" &&  (astr[x]=='\n' || astr[x]==';')){
+            cursentence+='.';
             sentences.push(cursentence);
             cursentence="";
         }
