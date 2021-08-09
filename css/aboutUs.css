@@ -10,41 +10,26 @@
 	padding: 0px;
     font-family: 'Times New Roman', serif;
 }
+
 .row {
 	width: auto;
 	margin-top: 0px;
 	margin-right: 0px;
 	margin-bottom: -4px;
 	margin-left: 0px;
-	padding-top: 0px;
-	padding-right: 0px;
-	padding-bottom: 25px;
-	padding-left: 0px;
+	padding: 30px;
 	display: inline-block;
 }
-.row.blockDisplay {
-	display: block;
-}
-.column_half {
-	width: 50%;
-	float: left;
-	margin-top: 0px;
-}
+
 .columns {
-	width: 25%;
+	width: 30%;
 	float: left;
 	font-family: 'Times New Roman', serif;
 	color: #696969;
 	line-height: 24px;
-	padding-top: 10px;
-	padding-bottom: 20px;
 	text-align: justify;
 	margin-top: 15px;
-	margin-bottom: 50px;
-	padding-left: 0px;
-	padding-right: 0px;
-	margin-left: 0px;
-	margin-right: 0px;
+	margin-bottom: 90px;
 	height: 400px;
 }
 .row .columns p {
