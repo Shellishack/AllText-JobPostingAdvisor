@@ -130,6 +130,9 @@ p b{
 	line-height: 30px;
 }
 
+.section2 .inner_border{
+	height:1200px;
+}
 .footer {
 	background-color: #717070;
 }
