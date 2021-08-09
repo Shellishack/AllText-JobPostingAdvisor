@@ -1,100 +1,113 @@
 <!Doctype html>
 <html>
-	
+
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Employer</title>
-  <link href="../css/employerPage.css" rel="stylesheet" type="text/css">
-  <script type="module" src="../scripts/main.js"></script>
-	<script> 
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Employer</title>
+	<link href="../css/employerPage.css" rel="stylesheet" type="text/css">
+	<script type="module" src="../scripts/main.js"></script>
+	<script>
 		async function loadjobreq(astr) {
 			// create loading gif
-			var parentdiv=document.getElementById('proceed_div');
-			var loadinggif=document.createElement("iframe");
-			loadinggif.setAttribute('src','https://giphy.com/embed/KG4PMQ0jyimywxNt8i');
-			loadinggif.setAttribute('frameBorder','0');
-			loadinggif.setAttribute('width','60');
-			loadinggif.setAttribute('height','60');
-			loadinggif.style.float='left';
-			loadinggif.style.marginLeft='30px';
-			loadinggif.style.marginTop='-10px';
-			// <iframe src="https://giphy.com/embed/KG4PMQ0jyimywxNt8i" width="60" height="60" frameBorder="0" style="float: left; margin-left: 30px;margin-top: -10px;"></iframe>
-			parentdiv.insertBefore(loadinggif,loadinggif.lastChild);
+			var parentdiv = document.getElementById('proceed_div');
+			var loadinggif = document.createElement('iframe');
+			loadinggif.setAttribute('src', 'https://giphy.com/embed/L05HgB2h6qICDs5Sms');
+			loadinggif.setAttribute('frameBorder', '0');
+			loadinggif.setAttribute('width', '58.67');
+			loadinggif.setAttribute('height', '58.67');
+			loadinggif.style.float = 'left';
+			loadinggif.style.marginLeft = '30px';
+			loadinggif.style.pointerEvents = 'none';
+			// <iframe src="https://giphy.com/embed/L05HgB2h6qICDs5Sms" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/stickers/crearecreativita-loading-load-creare-creativita-L05HgB2h6qICDs5Sms">via GIPHY</a></p>	
+			parentdiv.appendChild(loadinggif);
 
+			var text = document.createElement('p');
+			text.textContent = "Advisor is evaluating your job post. Please wait.";
+			text.style.float = 'left';
+			text.style.marginLeft = '10px';
+			text.style.marginTop = '20px';
+			text.style.textAlign = 'center';
+			parentdiv.appendChild(text);
 			// process data
 			await process_stream(astr);
-			window.location="View Result.html";
+			window.location = "viewResultPage.html";
 		}
 
 	</script>
 </head>
-	
+
 <body>
-  <div class="container"> 	  
-    <header>
-	  <div class="primary_header">
-	    <h1 class="title"> Website Title (Our Product Name) -&nbsp; Employer&nbsp;&nbsp;</h1>
-	  </div>
-	  <nav class="secondary_header" id="menu">
-	    <ul>
-			<li><a href="employerPage.html">Employer</a></li>
-			<li><a href="employeePage.html">Employee</a></li>
-			<li><a href="developmentPage.html">Development</a></li>
-			<li><a href="aboutUsPage.html">About Us</a></li>
-			<li><a href="../index.html">Main</a></li>
-		</ul>
-	  </nav>
-    </header>
-    <section>
+	<div class="container">
+		<header>
+			<div class="primary_header">
+				<h1 class="title"> Website Title (Our Product Name) -&nbsp; Employer&nbsp;&nbsp;</h1>
+			</div>
+			<nav class="secondary_header" id="menu">
+				<ul>
+					<li><a href="employerPage.html">Employer</a></li>
+					<li><a href="employeePage.html">Employee</a></li>
+					<li><a href="developmentPage.html">Development</a></li>
+					<li><a href="aboutUsPage.html">About Us</a></li>
+					<li><a href="../pages/creditPage.html">Credit</a></li>
+					<li><a href="../index.html">Main</a></li>
+				</ul>
+			</nav>
+		</header>
+		<section>
 
-      <h2>Job posting process</h2>	
+			<h2>Job posting process</h2>
 
-	  <article class="template">
-		<h3>Posting Job via Template</h3>
-	    <form>
-		  <label for="Cname">Company Name:</label><br>
-		  <textarea name="Cname" required></textarea><br><br>
-		  <label for="contact">Email Address:</label><br>
-		  <textarea name="contact" required></textarea><br><br>
-		  <label for="Cback">Company Background:</label><br>
-		  <textarea class="bigBox" name="Cback" required></textarea><br><br>
-		  <label for="Jdes">Job Description:</label><br>
-		  <textarea class="bigBox" name="Jdes" required></textarea><br><br>
-		  <label for="Jre">Job Requirement:</label><br>
-		  <textarea class="bigBox" name="Jre" required></textarea><br><br>
-		  <button><a class="buttonLink" href="ViewResultPage.html">Proceed</a></button>
-		</form>
-	  </article>
+			<article class="template">
+				<h3>Posting Job via Template</h3>
+				<form>
+					<label>Company Name:</label><br>
+					<textarea></textarea><br><br>
+					<label>Email Address:</label><br>
+					<textarea></textarea><br><br>
+					<label>Company Background:</label><br>
+					<textarea class="bigBox"></textarea><br><br>
+					<label for="Jdes">Job Description:</label><br>
+					<textarea class="bigBox"></textarea><br><br>
+					<label for="Jre">Job Requirement:</label><br>
+					<textarea class="bigBox" id="jre"></textarea><br><br>
+				</form>
+				<div id="proceed_div">
+					<button class="button" onclick="loadjobreq(document.getElementById('jre').value)"
+						style="margin: 0%; float: left;">Proceed</button>
 
-	  <aside class="document"> 
-	    <h3>Submitting your document</h3>
-	     <form>
-		   <label class="input-file-button" for="myFile">
-		     Upload your document
-		   </label>
-		   <input type="file" id="myFile" name="filename" style="display:none">
-		   <br>
-		   <br>
-		   <br>
-		   <label class="submit-buttom" for="submit-document">
-		     Submit
-		   </label>
-		   <input type="submit" id="submit-document" style="display:none">
-		   <br>
-		   <br>
-		   <button><a class="buttonLink" href="ViewResultPage.html">Proceed</a></button>
-		 </form>
-	  </aside>	
 
-    </section>
-	
-	<footer class="secondary_header footer">
-      <div class="copyright">&copy;2021 -&nbsp;Website Title (Our Product Name) <strong>&nbsp;</strong></div>
-    </footer>	
-  </div>	
+					</aside>
+				</div>
+			</article>
+
+			<aside class="document">
+				<h3>Submitting your document</h3>
+				<form>
+					<label class="input-file-button" for="myFile">
+						Upload your document
+					</label>
+					<input type="file" id="myFile" name="filename" style="display:none">
+					<br>
+					<br>
+					<br>
+					<label class="submit-buttom" for="submit-document">
+						Submit
+					</label>
+					<input type="submit" id="submit-document" style="display:none">
+					<br>
+					<br>
+					<button><a class="buttonLink" href="ViewResultPage.html"></a>Proceed</button>
+				</form>
+			</aside>
+
+		</section>
+
+		<footer class="secondary_header footer">
+			<div class="copyright">&copy;2021 -&nbsp;Website Title (Our Product Name) <strong>&nbsp;</strong></div>
+		</footer>
+	</div>
 </body>
 
 </html>
-

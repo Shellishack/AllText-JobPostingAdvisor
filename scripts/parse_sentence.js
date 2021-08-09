@@ -1,12 +1,17 @@
 function parse_sentence(astr){
-    sentences=[];
-    cursentence="";
-    for(x=0;x<astr.length;++x){
-        if(astr[x]==' ' && cursentence==""){
+    var sentences=[];
+    var cursentence="";
+    for(var x=0;x<astr.length;++x){
+        if(cursentence=="" && (astr[x]==' ' || astr[x]=='\n')){
             continue;
         }
-        else if(astr[x]=='.' || astr[x]==';'){
+        else if(cursentence!="" && astr[x]=='.'){
             cursentence+=astr[x];
+            sentences.push(cursentence);
+            cursentence="";
+        }
+        else if(cursentence!="" &&  (astr[x]=='\n' || astr[x]==';')){
+            cursentence+='.';
             sentences.push(cursentence);
             cursentence="";
         }
@@ -14,6 +19,11 @@ function parse_sentence(astr){
             cursentence+=astr[x];
         }
     }
-    console.log(sentences);
+    if(cursentence.length!=0){
+        sentences.push(cursentence);
+    }
+    // console.log(sentences);
     return sentences;
 }
+
+export {parse_sentence};

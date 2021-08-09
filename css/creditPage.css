@@ -37,7 +37,7 @@
 	padding-right: 0px;
 	width: 100%;
 }
-.secondary_header ul li{
+.secondary_header ul li {
 	list-style: none;
 	float: left;
 	margin-top: 0px;
@@ -66,99 +66,73 @@ section {
 	padding: 30px;
 	margin: 0px;
 	width: auto;
+	background-color: rgb(36, 36, 36);
 }
-.section1{
-	height: 980px;
+.section1 {
+	height: 1100px;
 }
-.section2{
-	height: 700px;
+.section2 {
+	height: 1500px;
 }
 
 section h2 {
 	margin-left: 1.5%;
 	text-transform: uppercase;
+	color: #FFFFFF;
 	height: auto;
 	font-size: 200%;
 }
 
 .left_article {
-	background-color: #e8e8e8;
-	width: 50%;
+	background-color: rgb(36, 36, 36);
+	width: 100%;
 	float: left;
 	height: auto;
 }
 
-.inner_border{
-	margin: 6%;
+.inner_border {
+	height: 900px;
+	width: 90%;
+	margin: auto;
+	margin-top: 3%;
 	margin-bottom: 10%;
 	padding: 20px;
 	border: 5px ridge #cfcfcc;
 	border-radius: 10px;
-	background-color: #f2f2f2;
+	background-color: black;
 	font-size: 115%;
 	word-spacing: 0px;
 }
 
-.inner_border h3 {
-	margin-left: 5%;
-	margin-right: 5%;
-	margin-top: 5%;
+.contribution {
+	color: #ffffff;
+	float: left;
+	text-align: right;
+	width: 47%;
+	
+}
+
+.name {
+	color: #ffffff67;
+	float: right;
+	text-align: left;
+	width: 47%;
+}
+
+h3{
 	font-weight: bold;
 	text-transform: uppercase;
 	height: auto;
+	margin-bottom: 10%;
 }
 
-.study{
-	color: #000000;
-	text-decoration: none;
-	font-weight: bold;
-	height: auto;
-}
-.study:hover{
-	color: #8E8E8B;
-	cursor: pointer;
-}
-
-.container .left_article ul {
-	margin-left: 5%;
-	margin-right: 5%;
-	text-align: justify;
-	line-height: 24px;
-	color: #3C3D3D;
-	height: auto;
-}
-.container .left_article ol {
-	margin-left: 5%;
-	margin-right: 5%;
-	text-align: justify;
-	line-height: 24px;
-	color: #3C3D3D;
-	height: auto;
-}
-.container .left_article li {
-	margin-bottom: 4.5px;
-	margin-top: 4.5px;
-	height: auto;
-	padding-left: 8px;
+p b{
 	line-height: 30px;
-	text-align: left;
 }
 
-.right_article {
-	width: auto;
-	float: left;
-	background-color: #e8e8e8;
-	padding-left: 0px;
-	height: auto;
+.section2 .inner_border{
+	height:1200px;
 }
-
-.placeholder {
-	margin-top: 25%;
-	margin-left: 10%;
-	width: 70%;
-	height: 190%;
-}
-
 .footer {
 	background-color: #717070;
 }

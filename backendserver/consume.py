@@ -26,7 +26,7 @@ def get_result_bias(jobrequirement):
 
     body = str.encode(json.dumps(data))
 
-    url = 'http://3fbf162c-2df3-40fd-9d95-f97bcc77c431.eastus.azurecontainer.io/score'
+    url = 'http://e83e850b-edc8-4106-9fca-3ae284381cda.eastus.azurecontainer.io/score'
     api_key = '' # Replace this with the API key for the web service
     headers = {'Content-Type':'application/json', 'Authorization':('Bearer '+ api_key)}
 
@@ -57,15 +57,14 @@ def get_result_group(jobrequirement):
         "data":
         [
             {
-                'jobrequirements': jobrequirement,
-                'Column4': 0
+                'jobrequirements': jobrequirement
             },
         ],
     }
 
     body = str.encode(json.dumps(data))
 
-    url = 'http://ef8d3d43-499b-4235-a41b-96b5677f585b.eastus.azurecontainer.io/score'
+    url = 'http://bfde2cfb-3b5e-40da-830c-292873a36ed7.eastus.azurecontainer.io/score'
     api_key = '' # Replace this with the API key for the web service
     headers = {'Content-Type':'application/json', 'Authorization':('Bearer '+ api_key)}
 

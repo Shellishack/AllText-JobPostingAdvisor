@@ -1,18 +1,18 @@
 <!doctype html>
 <html>
-	
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Development</title>
- 
-<link href="../css/developmentPage.css" rel="stylesheet" type="text/css">
+
+  <link href="../css/developmentPage.css" rel="stylesheet" type="text/css">
 </head>
-	
+
 <body>
   <div class="container">
-	  
+
     <header>
       <div class="primary_header">
         <h1 class="title"> Website Title (Our Product Name) - Development&nbsp;&nbsp;</h1>
@@ -21,63 +21,145 @@
         <ul>
           <li><a href="employerPage.html">Employer</a></li>
           <li><a href="employeePage.html">Employee</a></li>
-		  <li><a href="developmentPage.html">Development</a></li>
+          <li><a href="developmentPage.html">Development</a></li>
           <li><a href="aboutUsPage.html">About Us</a></li>
-		  <li><a href="../index.html">Main</a></li>
+          <li><a href="../pages/creditPage.html">Credit</a></li>
+          <li><a href="../index.html">Main</a></li>
         </ul>
       </nav>
     </header>
-	
+
     <section class="section1">
       <h2>About front-end design</h2>
-      <div class="left_article">	
+      <div class="left_article">
         <div class="inner_border">
           <h3>Timeline of development </h3>
           <ol>
-            <li>Researching and self-teaching relevant front-end programming languages like HTML, CSS, and JavaScript.</li>
+            <li>Researching and self-teaching relevant front-end programming languages like HTML, CSS, and JavaScript.
+            </li>
             <li>Discussion with the back-end design team to define all the UI components for the website.</li>
             <li>Organization of UI components in a logical manner.</li>
             <li>Designing and testing a website.</li>
             <li>Publication of final product.</li>
-          </ol> 
+          </ol>
         </div>
       </div>
-      <aside class="left_article"> 
+      <aside class="left_article">
         <div class="inner_border">
           <h3>Demonstration of Growth mindset&nbsp;</h3>
           <ul>
-            <li>An astonishing side of our front-end design is that the designated team members had zero experience in front-end web development. They are entry-level programmers who had insufficient knowledge in front-end programming languages. However, with a growth mindset and self-teaching skills, they have designed satisfactory web pages in only about four weeks. Furthermore, they have gained sufficient knowledge in several programming languages such as HTML, CSS, and JavaScript. Such accomplishments demonstrate the successful application of a growth mindset.</li>
-            </ul>
-        </div>  
+            <li>An astonishing side of our front-end design is that the designated team members had zero experience in
+              front-end web development. They are entry-level programmers who had insufficient knowledge in front-end
+              programming languages. However, with a growth mindset and self-teaching skills, they have designed
+              satisfactory web pages in only about four weeks. Furthermore, they have gained sufficient knowledge in
+              several programming languages such as HTML, CSS, and JavaScript. Such accomplishments demonstrate the
+              successful application of a growth mindset.</li>
+          </ul>
+        </div>
       </aside>
     </section>
-	  
+
     <section class="section2">
       <h2>About back-end design</h2>
-      <div class="left_article">	
-        <div class="inner_border">
-          <h3>Your heading</h3>
+      <div class="left_article" style="width: 100%;">
+        <div class="inner_border" style="margin: 3%; margin-top: 3.5%; margin-bottom:4%;">
+          <h3 style="margin-top: 2.3%;">Timeline of development</h3>
+          <ol>
+            <li>Confirming website functionalities and researcing AI and Cloud technologies</li>
             <ul>
-              <li>Your content</li>
-            </ul> 
+              <li>We decided to have employers as our major audience. Hence, we focused on making the job post advisor
+                powered by a text classification ML model.</li>
+              <li>Additionally, we created a chatbot that answers questions about our solution and biases against
+                workers at workplaces.</li>
+            </ul>
+            <li>Preparing training data for training ML.</li>
+            <ul>
+              <li>We decided
+                to train ML models using datasets labelled by ourselves.</li>
+              <li>We automated labelling processing using Pandas.</li>
+            </ul>
+            <li>Training ML models and deploying endpoints.</li>
+            <ul>
+              <li>We used Automated ML on Azure Machine Learning Studio to help us train the best performing models.
+              </li>
+              <li>We deployed endpoints through Azure Machine Learning Studio.</li>
+            </ul>
+            <li>Hosting sites on Azure App Service using Docker images.</li>
+            <ul>
+              <li>We hosted two servers. One is for the frontend that has a static web environment. The other one is for
+                the backend that runs a Python HTTP server.</li>
+            </ul>
+            <li>Linking the frontend and backend.</li>
+            <ul>
+              <li>We created customized endpoints on the backend server.</li>
+              <li>We wrote JS functions that access backend endpoints via REST API.</li>
+            </ul>
+          </ol>
         </div>
       </div>
-      <aside class="left_article">  
-        <div class="inner_border">
-          <h3>Your heading</h3>
-          <ul>
-            <li>Your content</li>
-          </ul>
-        </div>  
+
+      <aside class="left_article" style="width: 100%;">
+        <div class="inner_border" style="margin: 3%; margin-top: 1.6%; margin-bottom:7%; padding: 7%;">
+          <h3 style="margin: 2.5%; margin-top: -2.9%; margin-left: -0.5%;">Challenges and solutions</h3>
+          <h4 style="margin-left: 2.5%; margin-bottom: 0%;">Preparing datasets</h4>
+          <p style="margin: 2.5%;margin-bottom: 0%;margin-top: 1%;">
+            <b>Challenge:</b> Since we couldn't find any pre-trained model or labelled datasets for our ML application,
+            we had to process raw data and train ML models on our own. While we wished to have high quality labelled
+            training and testing sets, it was unrealistic for us to label enough data by hands in such a short time
+            period. Hence, we needed to
+            find a way to automate the labelling process although such an automation might trade off quality of data for
+            efficiency.
+            <br><br><b>Solution:</b>
+            <br> First, we manually labelled around one thousand job
+            requirements, and we extracted keywords that might introduce biases against disabled workers at workplaces.
+            <br><br> Second, the automation program written by Ellis labelled 300,000 entries in two raw datasets by
+            matching
+            extracted keywords. These laballed entries were further processed to make sure that they are balanced. Then
+            processed entries are randomly divided to training set and testing set.
+            <br><br>Lastly, we fed training data to Azure AutoML. After AutoML finished training, we deployed models
+            that performed well. We then fed additional testing data to test our models. We found that our two models
+            both had more than 99% accuracy rate, which matches traning accuracy. However, such a high accuracy raised
+            concerns of overfitting. We think that the high accuracy is the result of that many job requirements use
+            similar languages and wording. In other words, many testing data may contain phrases that exist in training
+            data. We think that our solution can be further improved if the ML models can pick up synonyms of similar
+            words and understand intentions as it can reduce the number of repeating phrases in data.
+          </p>
+
+          <h4 style="margin-left: 2.5%; margin-bottom: 0%;">Backend server</h4>
+          <p style="margin: 2.5%;margin-bottom: 0%;margin-top: 1%;">
+            <b>Challenge:</b> We wanted to fetch results from ML model endpoints. However, the endpoints deployed
+            automatically by Azure ML Studio did not accept CORS requests from a browser.
+            After doing some research, we found that we could not customize the CORS setting on the automatically
+            deployed endpoints.
+            <br><br><b>Solution:</b>
+            <br>There were immediately two possible solutions after we spotted the problem caused by AutoML endpoints'
+            unchangable settings. We could either transform our static website to a dynamic website and have an Express
+            server running, or we
+            could set up a separate backend server that would handle function calls from the frontend and send requests
+            to
+            the Internet.
+            <br><br>We decided to use the latter solution. The considerations were that, first, our frontend dev team
+            were fairly new to web design and swithcing html based static website to node.js based dynamic website could
+            add extra workload for them; and, second, we could save some time by using the consume sample codes given by
+            Azure ML endpoints. This solution also solved the original problem because it sent requests to AutoML
+            endpoints without using a browser, and we could configure CORS settings between frontend container and
+            backend container. The backend server would accept requests from the frontend, and then fetch results from
+            endpoints, and finally sent results back to the frontend.
+            <br><br>When choosing an environment for the backend server, we decided to use Python HTTP server because
+            sample Python codes were given. In addition, it would make more sense if we used only one language in each
+            Docker image. Hence, we hosted the backend server on a separated container.
+
+          </p>
+
+        </div>
       </aside>
     </section>
-	
+
     <footer class="secondary_header footer">
       <div class="copyright">&copy;2021 -&nbsp;Website Title (Our Product Name) <strong>&nbsp;</strong></div>
     </footer>
 
   </div>
 </body>
-	
-</html>
 
+</html>
