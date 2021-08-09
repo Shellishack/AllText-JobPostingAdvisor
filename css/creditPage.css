@@ -66,23 +66,25 @@ section {
 	padding: 30px;
 	margin: 0px;
 	width: auto;
+	background-color: rgb(36, 36, 36);
 }
 .section1 {
-	height: 400px;
+	height: 1100px;
 }
 .section2 {
-	height: 400px;
+	height: 1500px;
 }
 
 section h2 {
 	margin-left: 1.5%;
 	text-transform: uppercase;
+	color: #FFFFFF;
 	height: auto;
 	font-size: 200%;
 }
 
 .left_article {
-	background-color: #e8e8e8;
+	background-color: rgb(36, 36, 36);
 	width: 100%;
 	float: left;
 	height: auto;
@@ -97,12 +99,13 @@ section h2 {
 	padding: 20px;
 	border: 5px ridge #cfcfcc;
 	border-radius: 10px;
-	background-color: #f2f2f2;
+	background-color: black;
 	font-size: 115%;
 	word-spacing: 0px;
 }
 
 .contribution {
+	color: #ffffff;
 	float: left;
 	text-align: right;
 	width: 47%;
@@ -110,6 +113,7 @@ section h2 {
 }
 
 .name {
+	color: #ffffff67;
 	float: right;
 	text-align: left;
 	width: 47%;
@@ -124,49 +128,6 @@ h3{
 
 p b{
 	line-height: 30px;
-}
-
-
-
-
-.container .left_article ul {
-	margin-left: 5%;
-	margin-right: 5%;
-	text-align: justify;
-	line-height: 24px;
-	color: #3C3D3D;
-	height: auto;
-}
-.container .left_article ol {
-	margin-left: 5%;
-	margin-right: 5%;
-	text-align: justify;
-	line-height: 24px;
-	color: #3C3D3D;
-	height: auto;
-}
-.container .left_article li {
-	margin-bottom: 4.5px;
-	margin-top: 4.5px;
-	height: auto;
-	padding-left: 8px;
-	line-height: 30px;
-	text-align: left;
-}
-
-.right_article {
-	width: auto;
-	float: left;
-	background-color: #e8e8e8;
-	padding-left: 0px;
-	height: auto;
-}
-
-.placeholder {
-	margin-top: 25%;
-	margin-left: 10%;
-	width: 70%;
-	height: 190%;
 }
 
 .footer {
