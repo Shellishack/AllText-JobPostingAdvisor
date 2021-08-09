@@ -19,20 +19,20 @@
 			loadinggif.setAttribute('height', '58.67');
 			loadinggif.style.float = 'left';
 			loadinggif.style.marginLeft = '30px';
-			loadinggif.style.pointerEvents='none';
+			loadinggif.style.pointerEvents = 'none';
 			// <iframe src="https://giphy.com/embed/L05HgB2h6qICDs5Sms" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/stickers/crearecreativita-loading-load-creare-creativita-L05HgB2h6qICDs5Sms">via GIPHY</a></p>	
 			parentdiv.appendChild(loadinggif);
 
-			var text=document.createElement('p');
-			text.textContent="Advisor is evaluating your job post. Please wait.";
-			text.style.float='left';
-			text.style.marginLeft='10px';
-			text.style.marginTop='20px';
-			text.style.textAlign='center';
+			var text = document.createElement('p');
+			text.textContent = "Advisor is evaluating your job post. Please wait.";
+			text.style.float = 'left';
+			text.style.marginLeft = '10px';
+			text.style.marginTop = '20px';
+			text.style.textAlign = 'center';
 			parentdiv.appendChild(text);
 			// process data
 			await process_stream(astr);
-			window.location="viewResultPage.html";
+			window.location = "viewResultPage.html";
 		}
 
 	</script>
@@ -50,6 +50,7 @@
 					<li><a href="employeePage.html">Employee</a></li>
 					<li><a href="developmentPage.html">Development</a></li>
 					<li><a href="aboutUsPage.html">About Us</a></li>
+					<li><a href="../pages/creditPage.html">Credit</a></li>
 					<li><a href="../index.html">Main</a></li>
 				</ul>
 			</nav>
@@ -75,8 +76,8 @@
 				<div id="proceed_div">
 					<button class="button" onclick="loadjobreq(document.getElementById('jre').value)"
 						style="margin: 0%; float: left;">Proceed</button>
-					
-					
+
+
 					</aside>
 				</div>
 			</article>
