@@ -38,7 +38,6 @@
   padding-right: 0px;
   width: 100%;
 }
-
 .secondary_header ul li {
   list-style: none;
   float: left;
@@ -46,16 +45,14 @@
   margin-bottom: 0px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 0px;
-  padding-bottom: 0px;
+  padding: 0px;
   font-weight: normal;
   color: #ffffff;
   letter-spacing: 1px;
   text-align: center;
-  width: 20%;
+  width: 16.6667%;
   transition: all 0.3s linear;
 }
-
 nav a {
   text-decoration: none;
   color: white;
