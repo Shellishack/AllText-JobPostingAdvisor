@@ -17,21 +17,24 @@
 	margin-right: 0px;
 	margin-bottom: -4px;
 	margin-left: 0px;
-	padding: 30px;
+	padding: 50px;
 	display: inline-block;
 }
 
 .columns {
-	width: 30%;
 	float: left;
 	font-family: 'Times New Roman', serif;
 	color: #696969;
+	border: 5px ridge #cfcfcc;
+	border-radius: 15px;
+	background-color: #f2f2f2;
 	line-height: 24px;
 	text-align: justify;
-	margin-top: 15px;
-	margin-bottom: 90px;
-	height: 400px;
+	margin: 2%;
+	margin-bottom: 2.5%;
+	height:600px;
 }
+
 .row .columns p {
 	width: 75%;
 	margin-left: 8%;
@@ -124,87 +127,7 @@ section {
 	text-transform: uppercase;
 	height: auto;
 }
-.study{
-	color: #000000;
-	text-decoration: none;
-	font-weight: bold;
-	height: auto;
-}
-.study:hover{
-	color: #8E8E8B;
-}
-.container .left_article ul {
-	margin-left: 5%;
-	margin-right: 5%;
-	text-align: justify;
-	line-height: 24px;
-	color: #3C3D3D;
-	height: auto;
-}
-.container .left_article ol {
-	margin-left: 5%;
-	margin-right: 5%;
-	text-align: justify;
-	line-height: 24px;
-	color: #3C3D3D;
-	height: auto;
-}
-.container .left_article li {
-	margin-bottom: 4.5px;
-	margin-top: 4.5px;
-	height: auto;
-	padding-left: 8px;
-}
-.right_article {
-	width: 50%;
-	float: left;
-	background-color: #FFFFFF;
-	padding-left: 0px;
-	height: auto;
-}
-.container .right_article h3 {
-	padding-left: 10%;
-	padding-right: 5%;
-	margin-top: 5%;
-	color: #0F0F0F;
-	font-weight: bold;
-	text-transform: uppercase;
-	height: auto;
-}
-.container .right_article ul {
-	margin-top: 0px;
-	margin-right: 10px;
-	margin-bottom: 0px;
-	margin-left: 0px;
-	padding-top: 0px;
-	padding-right: 0px;
-	padding-bottom: 0px;
-	padding-left: 0px;
-	height: auto;
-}
-.right_article ul li {
-	font-family: "Source Sans Pro";
-	list-style: none;
-	text-align: center;
-	background-color: #B3B3B3;
-	width: 90%;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	padding-top: 15px;
-	padding-bottom: 15px;
-	color: #FFFFFF;
-	font-weight: bold;
-	border-radius: 0px;
-	transition: all 0.3s linear;
-	border-left: 5px solid #717070;
-	height: auto;
-}
-.right_article ul li:hover {
-	background-color: #717070;
-	cursor: pointer;
-}
+
 .footer {
 	background-color: #717070;
 }
@@ -426,7 +349,7 @@ body {
 
 }
 .columns {
-	width: 50%;
+	width: 45%;
 	float: left;
 	padding-left: 0px;
 	padding-top: 0px;
@@ -446,6 +369,7 @@ body {
 	border-radius: 200px;
 	height: 100px;
 	margin-left: auto;
+	margin-top:90px;
 }
 .thumbnail_align {
 	text-align: center;
