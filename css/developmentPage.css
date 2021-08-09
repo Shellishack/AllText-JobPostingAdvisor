@@ -146,6 +146,10 @@ section h2 {
 	text-align: left;
 }
 
+.container .left_article p{
+	line-height: 24px;
+	color: #3C3D3D;
+}
 .footer {
 	background-color: #717070;
 }
