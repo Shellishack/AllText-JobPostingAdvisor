@@ -1,20 +1,20 @@
 @charset "UTF-8";
-html{
-	margin: 0%;
-	width: 100%;
+html {
+  margin: 0%;
+  width: 100%;
 }
 
-body{
-	margin: inherit;
+body {
+  margin: inherit;
 }
 
 .container {
-	background-color: #e8e8e8;
-	width: inherit;
-	margin: inherit;
-	padding: 0px;
-    font-family: 'Times New Roman', serif;
-	color: #3C3D3D;
+  background-color: #e8e8e8;
+  width: inherit;
+  margin: inherit;
+  padding: 0px;
+  font-family: "Times New Roman", serif;
+  color: #3c3d3d;
 }
 
 .primary_header {
@@ -109,7 +109,7 @@ section h4 {
   margin-left: auto;
   margin-right: auto;
   position: relative;
-  left: 22%;
+  left: 25%;
 }
 
 .cl {
@@ -120,8 +120,8 @@ section h4 {
   font-size: 115%;
   word-spacing: 0px;
   padding: 50px;
-  width: 400px;
-  height: 550px;
+  width: 85%;
+  height: 80%;
 }
 
 .suggestion {
