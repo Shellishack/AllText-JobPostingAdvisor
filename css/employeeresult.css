@@ -1,14 +1,20 @@
 @charset "UTF-8";
+html{
+	margin: 0%;
+	width: 100%;
+}
+
+body{
+	margin: inherit;
+}
+
 .container {
-  background-color: #e8e8e8;
-  width: 1280px;
-  margin-top: 25px;
-  margin-bottom: auto;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0px;
-  font-family: "Times New Roman", serif;
-  color: #3c3d3d;
+	background-color: #e8e8e8;
+	width: inherit;
+	margin: inherit;
+	padding: 0px;
+    font-family: 'Times New Roman', serif;
+	color: #3C3D3D;
 }
 
 .primary_header {

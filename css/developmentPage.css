@@ -1,14 +1,20 @@
 @charset "UTF-8";
+html{
+	margin: 0%;
+	width: 100%;
+}
+
+body{
+	margin: inherit;
+}
+
 .container {
 	background-color: #e8e8e8;
-	width: 1280px;
-	margin-top: 25px;
-	margin-bottom: auto;
-	margin-left: auto;
-	margin-right: auto;
+	width: inherit;
+	margin: inherit;
 	padding: 0px;
-	font-family: 'Times New Roman', serif;
-    
+    font-family: 'Times New Roman', serif;
+	color: #3C3D3D;
 }
 
 .primary_header {
@@ -101,9 +107,7 @@ section h2 {
 	font-size: 200%;
 }
 .container .left_article h3 {
-	margin-left: 5%;
-	margin-right: 5%;
-	margin-top: 5%;
+	margin: 10px;
 	color: #3C3D3D;
 	font-weight: bold;
 	text-transform: uppercase;
@@ -122,16 +126,14 @@ section h2 {
 }
 
 .container .left_article ul {
-	margin-left: 5%;
-	margin-right: 5%;
+	margin: 10px;
 	text-align: justify;
 	line-height: 24px;
 	color: #3C3D3D;
 	height: auto;
 }
 .container .left_article ol {
-	margin-left: 5%;
-	margin-right: 5%;
+	margin: 10px;
 	text-align: justify;
 	line-height: 24px;
 	color: #3C3D3D;
@@ -264,8 +266,7 @@ section h2 {
 .social .social_icon img {
 	width: 80%;
 }
-.container .secondary_header {
-}
+
 }
 
 @media (min-width: 321px) and (max-width: 768px) {
@@ -296,10 +297,7 @@ section h2 {
 	padding-top: 1px;
 	padding-bottom: 40px;
 }
-.left_article {
-	width: 100%;
-	height: 500px;
-}
+
 .right_article {
 	width: 100%;
 	height: auto;

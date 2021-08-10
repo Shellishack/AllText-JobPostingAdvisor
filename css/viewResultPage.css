@@ -1,11 +1,24 @@
 @charset "UTF-8";
+html{
+	margin: 0%;
+	width: 100%;
+	min-height: 100%;
+}
+
+body{
+	margin: inherit;
+	width: inherit;
+	min-height: 100%;
+	position: absolute;
+}
+
 .container {
 	background-color: #e8e8e8;
-	width: 1280px;
-	margin-top: 25px;
-	margin-bottom: auto;
-	margin-left: auto;
-	margin-right: auto;
+	width: inherit;
+	height: inherit;
+	position: absolute;
+	min-height: 100%;
+	margin: inherit;
 	padding: 0px;
     font-family: 'Times New Roman', serif;
 	color: #3C3D3D;
@@ -66,11 +79,8 @@ nav a:hover {
 }
 
 section {
-	padding: 30px;
-	margin-left: 100px;
-	margin-right: 100px;
-	width: auto;
-	height: 1300px;
+	width: 100%;
+	height: auto;
 }
 
 section h2 {
@@ -99,59 +109,17 @@ section h4{
 	font-size: 130%;	
 }
 
-.post {
-	float: left;
-	width: 50%;
-	margin-left: -3%;
-	
-}
-
-.yr {
-	box-sizing:content-box;
-	border: 5px ridge #cfcfcc;
-	border-radius: 10px;
-	background-color: #f2f2f2;
-	font-size: 115%;
-	word-spacing: 0px;
-	padding: 50px;
-	width: 400px;
-	/* height: 550px; */
-}
-
-.suggestion {
-	float: right;
-	width: 50%;
-	text-align: left;
-	margin-right: -3%;
-}
-
-.suggest-text {
-	box-sizing:content-box;
-	border: 5px ridge #cfcfcc;
-	border-radius: 10px;
-	background-color: #f2f2f2;
-	font-size: 115%;
-	word-spacing: 0px;
-	padding: 50px;
-	width: 400px;
-	/* height: 550px; */
-}
 
 button {
 	background-color: #464545;
 	color: white;
 	border: 0px;
 	border-radius:5px;
-	margin-top: 60px;
 	padding: 20px;
 	font-size: 16px;
 	transition-duration: 0.3s;
 	cursor:pointer;
-}
-
-.button{
-	text-decoration: none;
-	color: white;
+	margin: 10px;
 }
 
 .button:hover {
@@ -208,27 +176,7 @@ textarea:focus{
 	height: 200px;
 }
 
-button {
-	background-color: #464545;
-	color: white;
-	border: 0px;
-	border-radius:5px;
-	margin-top: 60px;
-	margin-right: 20px;
-	padding: 20px;
-	font-size: 16px;
-	transition-duration: 0.3s;
-	cursor:pointer;
-}
 
-.buttonLink{
-	text-decoration: none;
-	color: white;
-}
-
-button:hover {
-	background-color: #7e7e7e		
-}
 
 .document{
 	width: 27%;
@@ -252,69 +200,17 @@ button:hover {
 	border-radius: 10px;
 	padding: 10px;
 }
-
-
-
-
-
-
-
-
-
-
-
 	
 .left_article {
-	background-color: #FFFFFF;
+	background-color: #e8e8e8;
 	width: 50%;
 	float: left;
 	height: auto;
 }
 
-.inner_border{
-	margin: 3%;
-	padding-right: 40px;
-	padding-bottom: 10px;
-	border: 3px solid gray;
-	border-radius: 10px;
-	background-color: #DEF2F6;
-}
-
-.container .left_article h2 {
-	padding-left: 5%;
-	padding-right: 5%;
-	margin-top: 5%;
-	margin-bottom: 7%;
-	color: #3C3D3D;
-	font-weight: bold;
-	text-transform: uppercase;
-	height: auto;
-	font-size: 200%;
-}
-.container .left_article h3 {
-	margin-left: 5%;
-	margin-right: 5%;
-	margin-top: 5%;
-	color: #3C3D3D;
-	font-weight: bold;
-	text-transform: uppercase;
-	height: auto;
-}
-
-.study{
-	color: #000000;
-	text-decoration: none;
-	font-weight: bold;
-	height: auto;
-}
-.study:hover{
-	color: #8E8E8B;
-	cursor: pointer;
-}
-
 .container .left_article ul {
-	margin-left: 5%;
-	margin-right: 5%;
+	margin-left: 10px;
+	margin-right: 10px;
 	text-align: justify;
 	line-height: 24px;
 	color: #3C3D3D;
@@ -333,7 +229,46 @@ button:hover {
 	margin-top: 4.5px;
 	height: auto;
 	padding-left: 8px;
+	line-height: 30px;
+	text-align: left;
 }
+
+.inner_border{
+	padding: 20px;
+	border: 5px ridge #cfcfcc;
+	border-radius: 10px;
+	background-color: #f2f2f2;
+	font-size: 115%;
+	word-spacing: 0px;
+	height: auto;
+	position: relative;
+	width: 60%;
+	margin: auto;
+}
+
+.inner_border h3 {
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-top: 10px;
+	font-weight: bold;
+	text-transform: uppercase;
+	height: auto;
+}
+
+
+
+.study{
+	color: #000000;
+	text-decoration: none;
+	font-weight: bold;
+	height: auto;
+}
+.study:hover{
+	color: #8E8E8B;
+	cursor: pointer;
+}
+
+
 
 .right_article {
 	width: 50%;
@@ -351,6 +286,8 @@ button:hover {
 
 .footer {
 	background-color: #717070;
+	position: absolute;
+	bottom: 0;
 }
 
 .title {
@@ -442,11 +379,10 @@ button:hover {
 	padding-bottom: 0px;
 	margin-bottom: 0px;
 }
-.container .left_article h3 {
-	margin-top: 30px;
-}
+
 .social .social_icon img {
 	width: 80%;
+}
 }
 
 @media (min-width: 321px) and (max-width: 768px) {
@@ -477,10 +413,7 @@ button:hover {
 	padding-top: 1px;
 	padding-bottom: 40px;
 }
-.left_article {
-	width: 100%;
-	height: 500px;
-}
+
 .right_article {
 	width: 100%;
 	height: auto;
@@ -538,7 +471,7 @@ button:hover {
 
 }
 
-@media (min-width: 1001px) {}
+@media (min-width: 1001px) {
 
 .columns {
 	width: 50%;

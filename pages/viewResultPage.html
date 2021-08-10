@@ -166,24 +166,29 @@
 
 		<section>
 			<div>
-				<h2>AI JOB POSTING EVALUATOR</h2>
-				<h4 id="output"></h4>
-				<br>
+				<p>
+					<h2>AI JOB POSTING EVALUATOR</h2>
+					<h4 id="output"></h4>
+					<br>
+				</p>
 			</div>
 
-			<br><br><br>
+				<article class="left_article">
+					<h3>Your Posting</h3>
+					<div class="inner_border">
+						<p id="posting">sample</p>
+					</div>
+				</article>
+	
+				<aside class="left_article">
+					<h3>Suggestions</h3>
+					<p class="inner_border" id="s2">Click "Show Next" to view your suggestions.</p>
+					<div style="margin: auto;width: inherit;">
+						<button onclick="show_next_suggestion('s2')" class="button">Show Next</button>
+						<button onclick="show_previous_suggestion('s2')" class="button">Show Previous</button>
+					</div>
+				</aside>
 
-			<div class="post">
-				<h3>Your Posting</h3>
-				<p class="yr" id="posting">sample</p>
-			</div>
-
-			<aside class="suggestion">
-				<h3>Suggestions</h3>
-				<p class="suggest-text" id="s2">Click "Show Next" to view your suggestions.</p>
-				<button onclick="show_next_suggestion('s2')" class="button">Show Next</button>
-				<button onclick="show_previous_suggestion('s2')" class="button">Show Previous</button>
-			</aside>
 		</section>
 
 		<footer class="secondary_header footer">
