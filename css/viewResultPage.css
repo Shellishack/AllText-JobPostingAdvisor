@@ -3,20 +3,20 @@ html {
   margin: 0%;
   width: 100%;
   min-height: 100%;
+  height: 100%;
 }
 
 body {
   margin: inherit;
   width: inherit;
   min-height: 100%;
-  position: absolute;
+  height: inherit;
 }
 
 .container {
   background-color: #e8e8e8;
   width: inherit;
-  height: inherit;
-  position: absolute;
+  position: relative;
   min-height: 100%;
   margin: inherit;
   padding: 0px;
@@ -81,6 +81,7 @@ nav a:hover {
 section {
   width: 100%;
   height: auto;
+  overflow: auto;
 }
 
 section h2 {
@@ -203,6 +204,7 @@ textarea:focus {
   width: 50%;
   float: left;
   height: auto;
+  padding-bottom: 20px;
 }
 
 .container .left_article ul {
@@ -277,10 +279,12 @@ textarea:focus {
   height: 100%;
 }
 
-.footer {
+footer {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
   background-color: #717070;
-  position: absolute;
-  bottom: 0;
+  clear: left;
 }
 
 .title {
