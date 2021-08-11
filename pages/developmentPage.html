@@ -15,7 +15,7 @@
 
     <header>
       <div class="primary_header">
-        <h1 class="title"> Website Title (Our Product Name) - Development&nbsp;&nbsp;</h1>
+        <h1 class="title"> AllText - Development&nbsp;&nbsp;</h1>
       </div>
       <nav class="secondary_header" id="menu">
         <ul>
@@ -68,12 +68,13 @@
             <li>Confirming website functionalities and researcing AI and Cloud technologies</li>
             <ul>
               <li>We decided to have employers as our major audience. Hence, we focused on making the job post advisor
-                powered by a text classification ML model.</li>
-              <li>Additionally, we created a chatbot that answers questions about our solution and biases against
+                that would be powered by a text classification ML model.</li>
+              <li>Additionally, we created a chatbot that would answer questions about our solution and biases against
                 workers at workplaces.</li>
             </ul>
             <li>Preparing training data for training ML.</li>
             <ul>
+              <li>We found unstructured datasets online.</li>
               <li>We decided
                 to train ML models using datasets labelled by ourselves.</li>
               <li>We automated labelling processing using Pandas.</li>
@@ -86,13 +87,13 @@
             </ul>
             <li>Hosting sites on Azure App Service using Docker images.</li>
             <ul>
-              <li>We hosted two servers. One is for the frontend that has a static web environment. The other one is for
+              <li>We hosted two server images. One is for the frontend that has a static web environment. The other one is for
                 the backend that runs a Python HTTP server.</li>
             </ul>
             <li>Linking the frontend and backend.</li>
             <ul>
               <li>We created customized endpoints on the backend server.</li>
-              <li>We wrote JS functions that access backend endpoints via REST API.</li>
+              <li>We wrote JS functions that communicate with backend endpoints via REST API.</li>
             </ul>
           </ol>
         </div>
@@ -104,7 +105,7 @@
           <h4 style="margin-left: 2.5%; margin-bottom: 0%;">Preparing datasets</h4>
           <p style="margin: 2.5%;margin-bottom: 0%;margin-top: 1%;">
             <b>Challenge:</b> Since we couldn't find any pre-trained model or labelled datasets for our ML application,
-            we had to process raw data and train ML models on our own. While we wished to have high quality labelled
+            we had to process raw data and train ML models on our own. While we wished to have high quality
             training and testing sets, it was unrealistic for us to label enough data by hands in such a short time
             period. Hence, we needed to
             find a way to automate the labelling process although such an automation might trade off quality of data for
@@ -112,15 +113,15 @@
             <br><br><b>Solution:</b>
             <br> First, we manually labelled around one thousand job
             requirements, and we extracted keywords that might introduce biases against disabled workers at workplaces.
-            <br><br> Second, the automation program written by Ellis labelled 300,000 entries in two raw datasets by
+            <br><br> Second, the automation program written by Ellis labelled 300,000 entries from two raw datasets by
             matching
-            extracted keywords. These laballed entries were further processed to make sure that they are balanced. Then
-            processed entries are randomly divided to training set and testing set.
+            extracted keywords. These laballed entries were further processed to make sure that they are balanced and non-duplicated. Then
+            processed entries are randomly divided to training sets and testing sets. 
             <br><br>Lastly, we fed training data to Azure AutoML. After AutoML finished training, we deployed models
             that performed well. We then fed additional testing data to test our models. We found that our two models
             both had more than 99% accuracy rate, which matches traning accuracy. However, such a high accuracy raised
             concerns of overfitting. We think that the high accuracy is the result of that many job requirements use
-            similar languages and wording. In other words, many testing data may contain phrases that exist in training
+            similar languages and wording. In other words, many testing data may contain similar phrases that exist in training
             data. We think that our solution can be further improved if the ML models can pick up synonyms of similar
             words and understand intentions as it can reduce the number of repeating phrases in data.
           </p>
@@ -136,8 +137,7 @@
             unchangable settings. We could either transform our static website to a dynamic website and have an Express
             server running, or we
             could set up a separate backend server that would handle function calls from the frontend and send requests
-            to
-            the Internet.
+            to Azure.
             <br><br>We decided to use the latter solution. The considerations were that, first, our frontend dev team
             were fairly new to web design and swithcing html based static website to node.js based dynamic website could
             add extra workload for them; and, second, we could save some time by using the consume sample codes given by
@@ -156,7 +156,7 @@
     </section>
 
     <footer class="secondary_header footer">
-      <div class="copyright">&copy;2021 -&nbsp;Website Title (Our Product Name) <strong>&nbsp;</strong></div>
+      <div class="copyright">&copy;2021 -&nbsp;AllText (An advising platform for hiring employees with disabilities) <strong>&nbsp;</strong></div>
     </footer>
 
   </div>

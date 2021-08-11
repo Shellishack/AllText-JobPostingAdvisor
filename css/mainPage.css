@@ -74,10 +74,11 @@ section {
 	width: auto;
 }
 .section1{
-	height: 980px;
+	height: auto;
 }
 .section2{
-	height: 700px;
+	height: auto;
+	float: left;
 }
 
 section h2 {

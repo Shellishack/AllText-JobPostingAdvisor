@@ -75,10 +75,11 @@ section {
 	width: auto;
 }
 .section1{
-	height: 600px;
+	height: auto;
 }
 .section2{
-	height: 600px;
+	height: auto;
+	float: left;
 }
 
 .left_article {

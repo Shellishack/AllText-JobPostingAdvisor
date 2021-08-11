@@ -17,6 +17,10 @@ body{
 	color: #3C3D3D;
 }
 
+a{
+  color: yellow;
+}
+
 .primary_header {
   width: 100%;
   background-color: #6677a8;
