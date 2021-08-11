@@ -9,11 +9,11 @@ body{
 }
 
 .container {
-	background-color: #e8e8e8;
+	background-color: rgb(36, 36, 36);
 	width: inherit;
 	margin: inherit;
 	padding: 0px;
-    font-family: 'Times New Roman', serif;
+  font-family: 'Times New Roman', serif;
 	color: #3C3D3D;
 }
 

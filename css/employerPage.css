@@ -83,7 +83,7 @@ section {
 	margin-left: 100px;
 	margin-right: 100px;
 	width: auto;
-	height: 1000px;
+	height: 1200px;
 }
 
 section h2 {
@@ -106,7 +106,7 @@ section h3{
 .template{
 	width: 50%;
 	margin-left: 1.0%;
-	margin-bottom: 7%;
+	margin-bottom: 15%;
 	padding: 40px;
 	border: 5px ridge #cfcfcc;
 	border-radius: 10px;
