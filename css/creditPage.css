@@ -1,24 +1,24 @@
 @charset "UTF-8";
-html{
-	margin: 0%;
-	width: 100%;
+html {
+  margin: 0%;
+  width: 100%;
 }
 
-body{
-	margin: inherit;
+body {
+  margin: inherit;
 }
 
 .container {
-	background-color: rgb(36, 36, 36);
-	width: inherit;
-	margin: inherit;
-	padding: 0px;
-  font-family: 'Times New Roman', serif;
-	color: #3C3D3D;
+  background-color: rgb(36, 36, 36);
+  width: inherit;
+  margin: inherit;
+  padding: 0px;
+  font-family: "Times New Roman", serif;
+  color: #3c3d3d;
 }
 
-a{
-  color: yellow;
+a {
+  color: burlywood;
 }
 
 .primary_header {
