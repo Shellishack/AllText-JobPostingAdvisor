@@ -90,8 +90,7 @@ section {
 }
 
 .inner_border{
-	margin: 6%;
-	margin-bottom: 10%;
+	margin: 10px;
 	padding: 20px;
 	border: 5px ridge #cfcfcc;
 	border-radius: 10px;

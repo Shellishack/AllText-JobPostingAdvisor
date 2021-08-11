@@ -19,7 +19,11 @@ function shownext(id){
     if(ptr<len){
         var sentence=sessionStorage.getItem("sentence"+ptr.toString()+"_sentence");
         var group=sessionStorage.getItem("sentence"+ptr.toString()+"_group");
-        
+        //padding
+        while(group.length!=4){
+            group='0'+group;
+        }
+        // console.log(group);
 
         // if biased, synthesize output
         var text=sentence+'\n';
