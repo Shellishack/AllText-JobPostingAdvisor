@@ -1,6 +1,6 @@
 import pandas
 
-fl=pandas.read_csv('data_jobpost2.csv',usecols=['Job Description'])
+fl=pandas.read_csv('data_jobposts_2.csv',usecols=['Job Description'])
 
 for x in range(len(fl)):
     page=open("view_jobpost.html",'w')

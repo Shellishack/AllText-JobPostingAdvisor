@@ -31,16 +31,14 @@ def get_pos(astr):
         return wordnet.NOUN
     elif tag[0]=='R':
         return wordnet.ADV   
-
     return wordnet.NOUN
 
 def get_lemma(astr):
-    return wnl().lemmatize(astr,get_pos(astr))
+    return wnl().lemmatize(astr,pos=get_pos(astr))
 
 def check_lemma(a,b):
     a=get_lemma(a)
     b=get_lemma(b)
-
     if a==b:
         return True
     return False
@@ -63,8 +61,8 @@ for x in filelist:
         for z in range(len(fl_keywords)):
             if check_lemma(tempfl.at[y,'keyword'],fl_keywords.at[z,'keyword']):
                 fl_keywords.at[z,'againstgroup']=dec_to_binstr(binstr_to_dec(str(fl_keywords.at[z,'againstgroup'])) | binstr_to_dec(str(tempfl.at[y,'againstgroup'])))
-                fl_keywords.at[z,'keyword']=get_lemma(fl_keywords.at[z,'keyword'])
                 exclusionlist.append(y)
+            fl_keywords.at[z,'keyword']=get_lemma(fl_keywords.at[z,'keyword'])
 
     tempfl=tempfl.drop(exclusionlist).reset_index(drop=True)
     fl_keywords=fl_keywords.append(tempfl,ignore_index=True)

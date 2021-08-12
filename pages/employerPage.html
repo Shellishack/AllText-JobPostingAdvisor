@@ -1,127 +1,114 @@
 <!Doctype html>
 <html>
-<head>
-	
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Employer</title>
-  <link href="../css/others.css" rel="stylesheet" type="text/css">
-	
-  <style>
-    .text {
-		border-top: 5px solid grey;
-		border-left: 5px solid grey;
-		border-right: 5px solid grey;
-		height:1200px;
-	}
-	aside.ds {
-		background-color:rgba(227,221,222,1.00);
-		border: 3px black solid;
-		border-color: rgba(86,86,86,1.00);
-	}
 
-	.button {
-		background-color:rgba(4,122,150,1.00); 
-		border:none;color:white; padding:12px 32px; 
-		font-size:16px;
-		transition-duration: 0.3s;
-		position:relative;
-		left:30px;
-		cursor:pointer;
-		border-radius:5px;
-	}
-	.button:hover {
-		background-color:rgba(123,216,250,1.00);		
-	}
-	.next {
-		text-decoration: none;
-		color:white;
-		target:_blank;
-	}
-	  form {
-		  max-width:600px;
-		  padding:10px;
-	  }
-	  textarea {
-		  border: 2px solid grey;
-		  border-radius: 10px;
-		  background-color:rgba(227,221,222,1.00);
-		  resize:none;
-		  width: 300px;
-		  padding:10px;
-	  }
-	  textarea:focus {
-		  background-color:rgba(247,242,242,1.00);
-	  }
-  </style>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Employer</title>
+	<link href="../css/employerPage.css" rel="stylesheet" type="text/css">
+	<script type="module" src="../scripts/main.js"></script>
+	<script>
+		async function loadjobreq(astr) {
+			// create loading gif
+			var parentdiv = document.getElementById('proceed_div');
+			var loadinggif = document.createElement('iframe');
+			loadinggif.setAttribute('src', 'https://giphy.com/embed/L05HgB2h6qICDs5Sms');
+			loadinggif.setAttribute('frameBorder', '0');
+			loadinggif.setAttribute('width', '58.67');
+			loadinggif.setAttribute('height', '58.67');
+			loadinggif.style.float = 'left';
+			loadinggif.style.marginLeft = '30px';
+			loadinggif.style.pointerEvents = 'none';
+			// <iframe src="https://giphy.com/embed/L05HgB2h6qICDs5Sms" width="480" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/stickers/crearecreativita-loading-load-creare-creativita-L05HgB2h6qICDs5Sms">via GIPHY</a></p>	
+			parentdiv.appendChild(loadinggif);
+
+			var text = document.createElement('p');
+			text.textContent = "Advisor is evaluating your job post. Please wait.";
+			text.style.float = 'left';
+			text.style.marginLeft = '10px';
+			text.style.marginTop = '20px';
+			text.style.textAlign = 'center';
+			parentdiv.appendChild(text);
+			// process data
+			await process_stream(astr);
+			window.location = "viewResultPage.html";
+		}
+
+	</script>
 </head>
-	
+
 <body>
-  <div class="container">
-	  
-	<header>
-	  <div class="primary_header">
-	    <h1 class="title"> Website Title (Our Product Name) -&nbsp; Employer&nbsp;&nbsp;</h1>
-	  </div>
-    <nav class="secondary_header" id="menu">
-      <ul>
-        <li><a href="employerPage.html">Employer</a></li>
-        <li><a href="employeePage.html">Employee</a></li>
-		<li><a href="developmentPage.html">Development</a></li>
-        <li><a href="aboutUsPage.html">About Us</a></li>
-		<li><a href="../NewIndex.html">Main</a></li>
-      </ul>
-    </nav>
-  </header>
-	  
-  <div class="text">
-		<h4 style="text-align:left; position:relative; left:30px;">You can submit via provided template or submit your document directly.</h4>
-		
-<!-- I don't know how to get the template you used so I just make some functionalities -->
-		
-	<div class="document">
-		
-  		<p>
-			<aside class="ds" style="position:absolute;left:1070px;top:350px;padding:40px 60px; box-sizing:content-box"> 
-				Or submit your files here:
+	<div class="container">
+		<header>
+			<div class="primary_header">
+				<h1 class="title"> AllText -&nbsp; Employer&nbsp;&nbsp;</h1>
+			</div>
+			<nav class="secondary_header" id="menu">
+				<ul>
+					<li><a href="employerPage.html">Employer</a></li>
+					<li><a href="employeePage.html">Employee</a></li>
+					<li><a href="developmentPage.html">Development</a></li>
+					<li><a href="aboutUsPage.html">About Us</a></li>
+					<li><a href="../pages/creditPage.html">Credit</a></li>
+					<li><a href="../index.html">Main</a></li>
+				</ul>
+			</nav>
+		</header>
+		<section>
+
+			<h2>Job posting process</h2>
+
+			<article class="template">
+				<h3>Posting Job via Template</h3>
 				<form>
-					<input type="file" id="myFile" name="filename">
-					<input type="submit">
+					<label>Company Name:</label><br>
+					<textarea></textarea><br><br>
+					<label>Email Address:</label><br>
+					<textarea></textarea><br><br>
+					<label>Company Background:</label><br>
+					<textarea class="bigBox"></textarea><br><br>
+					<label for="Jdes">Job Description:</label><br>
+					<textarea class="bigBox"></textarea><br><br>
+					<label for="Jre">Job Requirement:</label><br>
+					<textarea class="bigBox" id="jre"></textarea><br><br>
+				</form>
+				<div id="proceed_div">
+					<button class="button" onclick="loadjobreq(document.getElementById('jre').value)"
+						style="margin: 0%; float: left;">Proceed</button>
+
+
+					</aside>
+				</div>
+			</article>
+
+			<aside class="document">
+				<h3>Submitting your document</h3><br>
+				<form>
+					<label class="input-file-button" for="myFile">
+						Upload your document
+					</label>
+					<input type="file" id="myFile" name="filename" style="display:none">
+					<br>
+					<br>
+					<br>
+					<label class="submit-buttom" for="submit-document">
+						Submit
+					</label>
+					<input type="submit" id="submit-document" style="display:none">
+					<br>
+					<br>
+					<button><a class="buttonLink" href="ViewResultPage.html"></a>Proceed</button>
 				</form>
 			</aside>
-	  </p>
-  
-	</div>
-	
-	
-	
-	<div class="template">
-		<form action="">
-		<label for="Cname">Company name:</label><br>
-		<textarea name="Cname" required></textarea><br><br>
-		<label for="contact">Email address:</label><br>
-		<textarea name="contact" required></textarea><br><br>
-		<label for="Cback">Company background:</label><br>
-		<textarea name="Cback" style="width:600px; height:200px;"></textarea><br><br>
-		<label for="Jdes">Job Description:</label><br>
-		<textarea name="Jdes" required style="width:600px; height:200px;"></textarea><br><br>
-		<label for="Jre">Job Requirement:</label><br>
-		<textarea name="Jre" required style="width:600px; height:200px;"></textarea><br><br>
-			
-		</form>
-		
-		<div>
-		<button id="final"  class="button">Submit</button>
-		<aside style="position:relative;left:200px;top:-42px;"><button class="button"><a href="View Result.html" class="next">Proceed</a></button></aside>
-			</div>
-	</div>
-	</div>
-	  <footer class="secondary_header footer">
-    <div class="copyright">&copy;2021 -&nbsp;Website Title (Our Product Name) <strong>&nbsp;</strong></div>
-  </footer>	
-  </div>
 
+		</section>
+
+		<footer class="secondary_header footer">
+			<div class="copyright">&copy;2021 -&nbsp;AllText (An advising platform for hiring employees with
+				disabilities) <strong>&nbsp;</strong></div>
+		</footer>
+	</div>
 </body>
-</html>
 
+</html>

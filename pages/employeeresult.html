@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Response Page</title>
+	<link href="../css/employeeresult.css" rel="stylesheet" type="text/css">
+	<style>
+		.highlight {
+			background-color: rgba(180, 240, 252, 1.00);
+		}
+
+		/* Bot Button */
+
+		.open-button {
+			background-color: rgba(241, 158, 11, 1.00);
+			border: none;
+			color: white;
+			padding: 12px 32px;
+			font-size: 16px;
+			transition-duration: 0.3s;
+			cursor: pointer;
+			position: fixed;
+			right: 40px;
+			bottom: 30px;
+			border-radius: 10px;
+
+
+		}
+
+		.open-button:hover {
+			background-color: rgba(168, 154, 1, 1.00);
+		}
+
+		.chat-popup {
+			display: none;
+			position: fixed;
+			bottom: 30px;
+			right: 30px;
+			height: 640px;
+			width: 400px;
+			border: 3px solid #f1f1f1;
+			border-radius: 15px;
+			z-index: 9;
+			background-color: aliceblue;
+		}
+
+		.cancel {
+			background-color: rgba(193, 5, 8, 1.00);
+			border: none;
+			color: white;
+			padding: 12px 32px;
+			font-size: 16px;
+			border-radius: 10px;
+			transition-duration: 0.3s;
+			cursor: pointer;
+			margin-left: 50px;
+			margin-top: 8px;
+			width: 300px;
+		}
+
+		.cancel:hover {
+			background-color: indianred;
+		}
+
+		.chatbot_header {
+			text-align: center;
+		}
+	</style>
+	<script>
+		var xhr = new XMLHttpRequest();
+		xhr.open('GET', "https://webchat.botframework.com/api/tokens", true);
+		xhr.setRequestHeader('Authorization', 'BotConnector ' + 'YOUR SECRET HERE');
+		xhr.send();
+		xhr.onreadystatechange = processRequest;
+
+		function processRequest(e) {
+			if (xhr.readyState == 4 && xhr.status == 200) {
+				var response = JSON.parse(xhr.responseText);
+				document.getElementById("chat").src = "https://webchat.botframework.com/embed/<botname>?t=" + response
+			}
+		}
+
+
+		function openchatbot() {
+			document.getElementById("mychatbot").style.display = "block";
+		}
+
+		function closechatbot() {
+			document.getElementById("mychatbot").style.display = "none";
+		}
+
+	</script>
+</head>
+
+<body>
+	<div class="container">
+		<header>
+			<div class="primary_header" style:>
+				<h1 class="title"> AllText - Employee</h1>
+			</div>
+			<nav class="secondary_header" id="menu">
+				<ul>
+					<li><a href="employerPage.html">Employer</a></li>
+					<li><a href="employeePage.html">Employee</a></li>
+					<li><a href="developmentPage.html">Development</a></li>
+					<li><a href="aboutUsPage.html">About Us</a></li>
+					<li><a href="../pages/creditPage.html">Credit</a></li>
+					<li><a href="../index.html">Main</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<section>
+			<div>
+				<h2>AI JOB MATCHING RESULT</h2>
+				<h4 id="output"></h4>
+				<h4>Here's a list of companies you might be interested in. Click on them to visit their website.</h4>
+				<br>
+			</div>
+
+			<br><br><br>
+
+			<div class="Company">
+				<h3>Company List</h3>
+				<p class="cl">
+					<a href="">Company A</a><br>
+					Company A is empowering disabled employee by hiring disabled coders and provide them accomodations
+					for their need.
+					<br><br>
+					<a href="">Company B</a><br>
+					Company B is providing additional support for mentally disabled employees by maintaining a
+					discribmination-free workplace. <br>
+				</p>
+			</div>
+
+		</section>
+
+		<footer class="secondary_header footer">
+			<div class="copyright">&copy;2021 -&nbsp;AllText (An advising platform for hiring employees with
+				disabilities)<strong>&nbsp;</strong></div>
+		</footer>
+	</div>
+
+	<button class="open-button" onclick="openchatbot()">Use Our Chatbot</button>
+	<div class="chat-popup" id="mychatbot">
+		<h1 class="chatbot_header">Chatbot</h1>
+		<iframe
+			src='https://webchat.botframework.com/embed/WEA-AI-WebBot-1?s=7VAatpKc7RY.HlsdICc1gyBoXZOrTRKPL0Hik3Z_MOCcvt4eWsNPObk'
+			style='min-width: 400px; width: 40%; min-height: 500px;'></iframe>
+		<button type="button" class="cancel" onclick="closechatbot()">Close</button>
+	</div>
+</body>
+
+</html>
