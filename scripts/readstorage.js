@@ -59,11 +59,15 @@ function showprevious(id){
     var ptr=parseInt(sessionStorage.getItem("ptr"))-1;
     var len=sessionStorage.getItem("len");
 
+    
+
     if(ptr>-1){
         var sentence=sessionStorage.getItem("sentence"+ptr.toString()+"_sentence");
         var group=sessionStorage.getItem("sentence"+ptr.toString()+"_group");
         
-
+        while(group.length!=4){
+            group='0'+group;
+        }
         // if biased, synthesize output
         var text=sentence+'\n';
         if(group[0]=='1'){
