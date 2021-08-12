@@ -5,13 +5,13 @@ html {
 }
 
 body {
-
   background-color: #e8e8e8;
   width: inherit;
   margin: inherit;
   padding: 0px;
   font-family: "Times New Roman", serif;
   color: #3c3d3d;
+  margin: inherit;
 }
 
 .primary_header {
@@ -163,7 +163,6 @@ button {
   background-color: #7e7e7e;
 }
 
-
 button {
   background-color: #464545;
   color: white;
@@ -292,7 +291,7 @@ button:hover {
     padding-bottom: 0px;
     margin-bottom: 0px;
   }
-  .container .left_article h3 {
+  body .left_article h3 {
     margin-top: 30px;
   }
   .social .social_icon img {

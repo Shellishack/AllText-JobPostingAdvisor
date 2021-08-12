@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
-	
+  
     <head>
-	
+  
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,59 +16,58 @@
             left: 0px;
           }
 
-
           .open-button {
-			background-color:rgba(241,158,11,1.00); 
-			border:none;color:white; padding:12px 12px; 
-			font-size:16px;
-			transition-duration: 0.3s;
-			cursor:pointer;
-			position: fixed;
-			right: 100px;
+      background-color:rgba(241,158,11,1.00); 
+      border:none;color:white; padding:12px 12px; 
+      font-size:16px;
+      transition-duration: 0.3s;
+      cursor:pointer;
+      position: fixed;
+      right: 100px;
       bottom: 20px;
-			border-radius: 10px;
+      border-radius: 10px;
       height: 40px;
 
-			
-			
-		}
-		
-		.open-button:hover {
-			background-color:rgba(168,154,1,1.00);		
-		}
-		
-		.chat-popup {
-			display: none;
-			position: fixed;
-			bottom: 20px;
-			right: 20px;
-			height: 640px;
-			width: 400px;
-			border: 3px solid #f1f1f1;
-			border-radius: 15px;
-			z-index: 9;
-			background-color:aliceblue;
-		}
-		
-		.cancel {
-			background-color:rgba(193,5,8,1.00); 
-			border:none; color:white; padding:12px 32px; 
-			font-size:16px;
-			border-radius:10px;
-			transition-duration: 0.3s;
-			cursor:pointer;
-			margin-left:50px;
-			margin-top:8px;
-			width: 300px;
-		}
-		
-		.cancel:hover {
-			background-color:indianred;
-		}
-		
-		.chatbot_header {
-			text-align: center;
-		}
+      
+      
+    }
+    
+    .open-button:hover {
+      background-color:rgba(168,154,1,1.00);    
+    }
+    
+    .chat-popup {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      height: 640px;
+      width: 400px;
+      border: 3px solid #f1f1f1;
+      border-radius: 15px;
+      z-index: 9;
+      background-color:aliceblue;
+    }
+    
+    .cancel {
+      background-color:rgba(193,5,8,1.00); 
+      border:none; color:white; padding:12px 32px; 
+      font-size:16px;
+      border-radius:10px;
+      transition-duration: 0.3s;
+      cursor:pointer;
+      margin-left:50px;
+      margin-top:8px;
+      width: 300px;
+    }
+    
+    .cancel:hover {
+      background-color:indianred;
+    }
+    
+    .chatbot_header {
+      text-align: center;
+    }
 
         </style>  
         <script>
@@ -108,7 +107,7 @@
           }
 
           
-	var xhr = new XMLHttpRequest();
+  var xhr = new XMLHttpRequest();
     xhr.open('GET', "https://webchat.botframework.com/api/tokens", true);
     xhr.setRequestHeader('Authorization', 'BotConnector ' + 'YOUR SECRET HERE');
     xhr.send();
@@ -120,23 +119,22 @@
         document.getElementById("chat").src="https://webchat.botframework.com/embed/<botname>?t="+response
       }
     }
-	
-	
-	function openchatbot() {
-		document.getElementById("mychatbot").style.display = "block";
-	}
-	
-	function closechatbot() {
-		document.getElementById("mychatbot").style.display = "none";
-	}
-
+  
+  
+  function openchatbot() {
+    document.getElementById("mychatbot").style.display = "block";
+  }
+  
+  function closechatbot() {
+    document.getElementById("mychatbot").style.display = "none";
+  }
 
   type_selction = []; 
 
   function dis_type() {
     console.log(this.parent.value);
   }
-	
+  
         </script>
       </head>
           
@@ -157,11 +155,10 @@
           </nav>
         </header>
 
-
         <!-- functions: enter conditions: via multiple choice or textbox 
         match employee with a job they are capable of -->
 
-        <div style="margin-left: 20%; margin-right: 20%;" class="main">
+        <div style="width: 60%; margin:auto; text-align:center" class="main">
           <h5>Notice: We DO NOT have the backend functions implemented for this specific page. This webpage serves the purpose of
             demonstrating our idea for intergrating the support for employees.
           </h5>
@@ -169,7 +166,7 @@
         <h4>Please use our chatbot if you have any question regarding certain terminologies</h4>
         <br><br>
 
-        <section class="choice" style="position:relative; left:100px;"> 
+        <section class="choice"> 
           <form>
           <div id="q1" style="display:inline; position:relative;">
           <p>I identify myself with:<br>
@@ -201,11 +198,11 @@
       </form>
     </section>
         <div>
-          <button onclick="showpreviousquestion()" id="prevbutton" class="navbutton" style="position:absolute; top:40%; left:60%;">Last Question</button>
-          <button onclick="shownextquestion()" id="nextbutton" class="navbutton" style="position:absolute; top:50%; left:60%">Next Question</button>
-          <button id="finalbutton" class="navbutton" style="display:none; position:absolute; top:60%; left:60%">
+          <button onclick="showpreviousquestion()" id="prevbutton" class="navbutton" style="position:relative; left:-2%;">Last Question</button>
+          <button onclick="shownextquestion()" id="nextbutton" class="navbutton">Next Question</button>
+          <button id="finalbutton" class="navbutton" style="display:none; position: relative; left: 2%;">
             <a href=employeeresult.html class="buttonlink" style="text-decoration: none; color:white">Proceed</a></button>
-        </div>
+          </div>
       </div>
         
       <button class="open-button" onclick="openchatbot()">Use Our Chatbot</button>
@@ -217,9 +214,8 @@
 
       <footer class="secondary_header footer">
         <div class="copyright">&copy;2021 -&nbsp;AllText (An advising platform for hiring employees with disabilities) <strong>&nbsp;</strong></div>
-      </footer>	
+      </footer> 
 
       </body>
 
 </html>
-
