@@ -62,8 +62,8 @@
     <section class="section2">
       <h2>About back-end design</h2>
       <div class="left_article" style="width: 100%;">
-        <div class="inner_border" >
-          <h3 >Timeline of development</h3>
+        <div class="inner_border">
+          <h3>Timeline of development</h3>
           <ol>
             <li>Confirming website functionalities and researcing AI and Cloud technologies</li>
             <ul>
@@ -87,7 +87,8 @@
             </ul>
             <li>Hosting sites on Azure App Service using Docker images.</li>
             <ul>
-              <li>We hosted two server images. One is for the frontend that has a static web environment. The other one is for
+              <li>We hosted two server images. One is for the frontend that has a static web environment. The other one
+                is for
                 the backend that runs a Python HTTP server.</li>
             </ul>
             <li>Linking the frontend and backend.</li>
@@ -100,8 +101,8 @@
       </div>
 
       <aside class="left_article" style="width: 100%;">
-        <div class="inner_border" >
-          <h3 >Challenges and solutions</h3>
+        <div class="inner_border">
+          <h3>Challenges and solutions</h3>
           <h4 style="margin-left: 2.5%; margin-bottom: 0%;">Preparing datasets</h4>
           <p style="margin: 2.5%;margin-bottom: 0%;margin-top: 1%;">
             <b>Challenge:</b> Since we couldn't find any pre-trained model or labelled datasets for our ML application,
@@ -115,13 +116,15 @@
             requirements, and we extracted keywords that might introduce biases against disabled workers at workplaces.
             <br><br> Second, the automation program written by Ellis labelled 300,000 entries from two raw datasets by
             matching
-            extracted keywords. These laballed entries were further processed to make sure that they are balanced and non-duplicated. Then
-            processed entries are randomly divided to training sets and testing sets. 
+            extracted keywords. These laballed entries were further processed to make sure that they are balanced and
+            non-duplicated. Then
+            processed entries are randomly divided to training sets and testing sets.
             <br><br>Lastly, we fed training data to Azure AutoML. After AutoML finished training, we deployed models
             that performed well. We then fed additional testing data to test our models. We found that our two models
             both had more than 99% accuracy rate, which matches traning accuracy. However, such a high accuracy raised
             concerns of overfitting. We think that the high accuracy is the result of that many job requirements use
-            similar languages and wording. In other words, many testing data may contain similar phrases that exist in training
+            similar languages and wording. In other words, many testing data may contain similar phrases that exist in
+            training
             data. We think that our solution can be further improved if the ML models can pick up synonyms of similar
             words and understand intentions as it can reduce the number of repeating phrases in data.
           </p>
@@ -153,10 +156,28 @@
 
         </div>
       </aside>
+
+      <aside class="left_article" style="width: 100%;">
+        <div class="inner_border">
+          <h3>Timeline of AI Chat Bot Design</h3>
+          <ol>
+            <li>Brainstormed and researched frequently asked questions about accessibility.</li>
+            <li>Found answers for questions using credible online sources.</li>
+            <li>Created knowledge base using Azure QnA Maker and populated it with QnA pairs.</li>
+            <li>Added chit-chat and alternate phrasing to all QnA pairs for improved conversational experience.</li>
+            <li>Trained chat bot with knowledge base.</li>
+            <li>Published chat bot using Azure Bot Service.</li>
+            <li>Integrated chat bot into website.</li>
+          </ol>
+        </div>
+      </aside>
+
     </section>
 
     <footer class="secondary_header footer">
-      <div class="copyright">&copy;2021 -&nbsp;AllText (An advising platform for hiring employees with disabilities) <strong>&nbsp;</strong></div>
+      <div class="copyright">&copy;2021 -&nbsp;AllText (An advising platform for hiring employees with disabilities)
+        <strong>&nbsp;</strong>
+      </div>
     </footer>
 
   </div>
